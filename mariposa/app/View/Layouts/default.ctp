@@ -1333,7 +1333,7 @@ inscripcionAlmacen.query({}).forEach(function(seg){
 	  	 var date = new Date();
 	  	 var hours = date.getHours();
 	  	 var min = date.getMinutes();
-	  	 if(hours == 15 && min >= 0 && min < 5){
+	  	 if(hours == 15 && min >= 0 && min < 4){
              
 	         var count = 0;
 	         bitacoraHoyAlmacen.query({usuario:idusuarioactivo}).forEach(function(bita){

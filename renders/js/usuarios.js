@@ -26,7 +26,6 @@ dojo.ready(function() {
     topeJanneth=0;
     topeLina=0;
     topeCesar=0;
-    topeCatalina=0;
     topeYolanda=0;
     topeDaniela=0;
     topeRosalba=0;
@@ -47,11 +46,7 @@ dojo.ready(function() {
             topeCesar=parseInt(des.cantidad) + topeCesar;
            if(isNaN(topeCesar)){topeCesar=0}
            }
-         if(des.user_id == "30"){
-            total = total + parseInt(des.cantidad);
-            topeCatalina=parseInt(des.cantidad) + topeCatalina;
-           if(isNaN(topeCatalina)){topeCatalina=0}
-           }
+         
          if(des.user_id == "13"){
             total = total + parseInt(des.cantidad);
             topeYolanda=parseInt(des.cantidad) + topeYolanda;
@@ -94,15 +89,15 @@ dojo.ready(function() {
    titleOrientation: "away",
    titleFontColor: "purple",
    labels: [{value: 1, text: "Janneth"},
-        {value: 2, text: "Cesar"}, {value: 3, text: "Yolanda"}, {value: 4, text: "Adelaida"},{value: 5, text: "Catalina"},
-        {value: 6, text: "Daniela"}, ]
+        {value: 2, text: "Cesar"}, {value: 3, text: "Yolanda"}, {value: 4, text: "Adelaida"},
+        {value: 5, text: "Daniela"}, ]
 });
     chart.addAxis("y", { title: 'Topes', vertical: true, includeZero: true });
     // Add the series of data
-    chart.addSeries("user", [topeJanneth, topeCesar, topeYolanda,topeRosalba,topeCatalina, topeDaniela], {color: "#71DCD0"});
-    chart.addSeries("semanal", [topeSemanal,topeSemanal,topeSemanal,topeSemanal,topeSemanal,topeSemanal], {color: "#EB5D82"});
-    chart.addSeries("mensual", [topeMensual,topeMensual,topeMensual, topeMensual,topeMensual,topeMensual], {color: "#F7EA9B"});
-    chart.addSeries("semestral", [topeSemestral,topeSemestral,topeSemestral, topeSemestral,topeSemestral,topeSemestral], {color: "#C8A4DC"});
+    chart.addSeries("user", [topeJanneth, topeCesar, topeYolanda,topeRosalba, topeDaniela], {color: "#71DCD0"});
+    chart.addSeries("semanal", [topeSemanal,topeSemanal,topeSemanal,topeSemanal,topeSemanal], {color: "#EB5D82"});
+    chart.addSeries("mensual", [topeMensual,topeMensual,topeMensual, topeMensual,topeMensual], {color: "#F7EA9B"});
+    chart.addSeries("semestral", [topeSemestral,topeSemestral,topeSemestral, topeSemestral,topeSemestral], {color: "#C8A4DC"});
     
    
  
@@ -123,7 +118,6 @@ function updateChart(value)
          topeSemestral=25;
          topeJanneth=0;
              topeCesar=0;
-             topeCatalina=0;
              topeYolanda=0;
              topeDaniela=0;
              topeRosalba=0;
@@ -135,10 +129,6 @@ function updateChart(value)
          if(des.usuario == "15" || des.usuario == "CESAR ROJAS"){
             topeCesar=parseInt(des.llamadaEfectiva) + topeCesar;
            if(isNaN(topeCesar)){topeCesar=0}
-           }
-         if(des.usuario == "30" || des.usuario == "CATALINA PINZON" ){
-            topeCatalina=parseInt(des.llamadaEfectiva) + topeCatalina;
-           if(isNaN(topeCatalina)){topeCatalina=0}
            }
          if(des.usuario == "13" || des.usuario == "YOLANDA ROJAS"){
             topeYolanda=parseInt(des.llamadaEfectiva) + topeYolanda;
@@ -166,7 +156,6 @@ function updateChart(value)
          topeLina=0;
 
       topeCesar=0;
-    topeCatalina=0;
     topeYolanda=0;
     topeDaniela=0;
     topeRosalba=0;
@@ -200,11 +189,7 @@ function updateChart(value)
             topeCesar=parseInt(des.cantidad) + topeCesar;
            if(isNaN(topeCesar)){topeCesar=0}
            }
-         if(des.user_id == "30"){
-            total = total + parseInt(des.cantidad);
-            topeCatalina=parseInt(des.cantidad) + topeCatalina;
-           if(isNaN(topeCatalina)){topeCatalina=0}
-           }
+        
          if(des.user_id == "13"){
             total = total + parseInt(des.cantidad);
             topeYolanda=parseInt(des.cantidad) + topeYolanda;
@@ -242,11 +227,7 @@ if(destino == "todos"){window.parent.VentasAlmacen.query({},{sort:[{attribute:"f
             topeCesar=parseInt(des.cantidad) + topeCesar;
            if(isNaN(topeCesar)){topeCesar=0}
            }
-         if(des.user_id == "30"){
-            
-            topeCatalina=parseInt(des.cantidad) + topeCatalina;
-           if(isNaN(topeCatalina)){topeCatalina=0}
-           }
+         
          if(des.user_id == "13"){
             
             topeYolanda=parseInt(des.cantidad) + topeYolanda;
@@ -280,7 +261,7 @@ if(destino == "todos"){window.parent.VentasAlmacen.query({},{sort:[{attribute:"f
 
          });
          topeSemanal=8;
-            total = topeJanneth+topeCesar+topeRosalba+topeCatalina+topeYolanda+topeDaniela;
+            total = topeJanneth+topeCesar+topeRosalba+topeYolanda+topeDaniela;
             if(total){$( "h4.first" ).replaceWith( "<h4 class='first'> Ventas Total:"+total+"</h4>" );}
                }
         }
@@ -308,11 +289,6 @@ if(destino == "todos"){window.parent.VentasAlmacen.query({},{sort:[{attribute:"f
             total = total + parseInt(des.cantidad);
             topeCesar=parseInt(des.cantidad) + topeCesar;
            if(isNaN(topeCesar)){topeCesar=0}
-           }
-         if(des.user_id == "30"){
-            total = total + parseInt(des.cantidad);
-            topeCatalina=parseInt(des.cantidad) + topeCatalina;
-           if(isNaN(topeCatalina)){topeCatalina=0}
            }
          if(des.user_id == "13"){
             total = total + parseInt(des.cantidad);
@@ -348,11 +324,6 @@ if(destino == "todos"){window.parent.VentasAlmacen.query({},{sort:[{attribute:"f
             
             topeCesar=parseInt(des.cantidad) + topeCesar;
            if(isNaN(topeCesar)){topeCesar=0}
-           }
-         if(des.user_id == "30"){
-            
-            topeCatalina=parseInt(des.cantidad) + topeCatalina;
-           if(isNaN(topeCatalina)){topeCatalina=0}
            }
          if(des.user_id == "13"){
             
@@ -388,7 +359,7 @@ if(destino == "todos"){window.parent.VentasAlmacen.query({},{sort:[{attribute:"f
          });
 
          topeMensual=35;
-         total = topeJanneth+topeCesar+topeRosalba+topeCatalina+topeYolanda+topeDaniela;
+         total = topeJanneth+topeCesar+topeRosalba+topeYolanda+topeDaniela;
          if(total){$( "h4.first" ).replaceWith( "<h4 class='first'> Ventas Total:"+total+"</h4>" );}
 }
      
@@ -411,11 +382,7 @@ if(destino == "todos"){window.parent.VentasAlmacen.query({},{sort:[{attribute:"f
             topeCesar=parseInt(des.cantidad) + topeCesar;
            if(isNaN(topeCesar)){topeCesar=0}
            }
-         if(des.user_id == "30"){
-            total = total + parseInt(des.cantidad);
-            topeCatalina=parseInt(des.cantidad) + topeCatalina;
-           if(isNaN(topeCatalina)){topeCatalina=0}
-           }
+  
          if(des.user_id == "13"){
             total = total + parseInt(des.cantidad);
             topeYolanda=parseInt(des.cantidad) + topeYolanda;
@@ -451,11 +418,7 @@ if(destino == "todos"){window.parent.VentasAlmacen.query({},{sort:[{attribute:"f
             topeCesar=parseInt(des.cantidad) + topeCesar;
            if(isNaN(topeCesar)){topeCesar=0}
            }
-         if(des.user_id == "30"){
-            
-            topeCatalina=parseInt(des.cantidad) + topeCatalina;
-           if(isNaN(topeCatalina)){topeCatalina=0}
-           }
+        
          if(des.user_id == "13"){
             
             topeYolanda=parseInt(des.cantidad) + topeYolanda;
@@ -489,15 +452,15 @@ if(destino == "todos"){window.parent.VentasAlmacen.query({},{sort:[{attribute:"f
 
          });
          topeSemestral=100;
-         total = topeJanneth+topeCesar+topeRosalba+topeCatalina+topeYolanda+topeDaniela;
+         total = topeJanneth+topeCesar+topeRosalba+topeYolanda+topeDaniela;
          if(total){$( "h4.first" ).replaceWith( "<h4 class='first'> Ventas Total:"+total+"</h4>" );}
         }
        }
       }
-        chart.updateSeries("user", [topeJanneth, topeCesar, topeYolanda, topeRosalba, topeCatalina, topeDaniela]);
-        chart.updateSeries("semanal", [topeSemanal,topeSemanal,topeSemanal, topeSemanal,topeSemanal,topeSemanal]);
-        chart.updateSeries("mensual", [topeMensual,topeMensual,topeMensual, topeMensual,topeMensual,topeMensual]);
-        chart.updateSeries("semestral", [topeSemestral,topeSemestral,topeSemestral, topeSemestral,topeSemestral,topeSemestral]);
+        chart.updateSeries("user", [topeJanneth, topeCesar, topeYolanda, topeRosalba,  topeDaniela]);
+        chart.updateSeries("semanal", [topeSemanal,topeSemanal,topeSemanal, topeSemanal,topeSemanal]);
+        chart.updateSeries("mensual", [topeMensual,topeMensual,topeMensual, topeMensual,topeMensual]);
+        chart.updateSeries("semestral", [topeSemestral,topeSemestral,topeSemestral, topeSemestral,topeSemestral]);
        
         chart.render();
  

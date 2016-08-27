@@ -271,11 +271,10 @@ tbody:hover tr:hover td {
 	    <div class="col-md-7">
 <div id="chartNode" style="width: 790px; height: 420px;"></div>
 <<img src="/v15/mariposa/img/Janneth.jpg" border="0" style="position:absolute;top:380px; left:137px; width:32px;"/>
-<img src="/v15/mariposa/img/Cesar.jpg" border="0" style="position:absolute;top:380px; left:253px; width:32px;"/>
-<img src="/v15/mariposa/img/Yolanda.jpg" border="0" style="position:absolute;top:380px; left:364px; width:32px;"/>
-<img src="/v15/mariposa/img/Rosalba.jpg" border="0" style="position:absolute;top:380px; left:480px; width:32px;"/>
-<img src="/v15/mariposa/img/CATALINA.jpg" border="0" style="position:absolute;top:380px; left:590px; width:32px;"/>
-<img src="/v15/mariposa/img/DANIELA.jpg" border="0" style="position:absolute;top:380px; left:700px; width:32px;"/>
+<img src="/v15/mariposa/img/Cesar.jpg" border="0" style="position:absolute;top:380px; left:280px; width:32px;"/>
+<img src="/v15/mariposa/img/Yolanda.jpg" border="0" style="position:absolute;top:380px; left:420px; width:32px;"/>
+<img src="/v15/mariposa/img/Rosalba.jpg" border="0" style="position:absolute;top:380px; left:560px; width:32px;"/>
+<img src="/v15/mariposa/img/DANIELA.JPG" border="0" style="position:absolute;top:380px; left:700px; width:32px;"/>
 
 </div>
 
