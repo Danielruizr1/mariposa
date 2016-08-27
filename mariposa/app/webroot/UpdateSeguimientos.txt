@@ -1,0 +1,1 @@
+update seguimientos set SURA_VER=7 where id=6859;

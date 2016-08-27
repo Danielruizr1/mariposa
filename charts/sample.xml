@@ -1,0 +1,126 @@
+<chart>
+
+<legend layout='horizontal' 
+           width='100'
+           bullet='circle'
+           font='arial'
+           bold='true'
+           size='12'
+        height='10' 
+           alpha='90'
+           /> 
+
+  <chart_note type='lance'
+               size='11' 
+               color='000000'
+               alpha='90'
+               x='0'
+               y='-15'
+               offset_y='-5'
+               background_color_1='ff4400' 
+               background_color_2='ffff00' 
+               background_alpha='75' 
+               shadow='low'
+               />
+
+  <chart_label prefix='' 
+                suffix='n' 
+                decimals='0' 
+                decimal_char='.'
+                separator=''
+                position='outside'
+                hide_zero='true' 
+                font='arial' 
+                bold='true' 
+                size='10' 
+                color='FF0000' 
+                alpha='90'
+                />
+
+ <chart_border top_thickness='0'
+                 bottom_thickness='2'
+                 left_thickness='2'
+                 right_thickness='0'
+                 color='FF0000'
+                 /> 
+
+<axis_category 
+           
+               orientation='diagonal_up'
+               size='16'
+         
+               />
+			   
+	<axis_value 
+           
+              
+               size='16'
+         
+               />		   
+			   
+<chart_grid_h thickness='1'
+              color='FF0000'
+              alpha='20'
+              type='dashed'
+              /> 
+
+<chart_grid_v thickness='1'
+              color='FF0000'
+              alpha='20'
+              type='dashed'
+              /> 
+
+
+<chart_data>
+  <row>
+	 <null/>
+	   <string>SURA</string>
+         <string>PTY</string>
+         <string>MEX</string>
+         <string>AUA</string>
+		 <string>EUR</string>
+         <string>NY-CUN</string>
+         <string>FLA-CUN</string>
+         <string>FLA-NY</string>
+		    <string>FLA</string>
+         <string>FLA-MQT</string>
+         <string>HAI</string>
+  </row>
+  <row>
+	 <string>Metas en Destinos Junio 2013</string>
+	      <!--SURAMERICA --><number>22</number>
+          <!-- PANAMA --><number>15</number>
+         <!-- MEXICO --><number>15</number>
+         <!-- ARUBA --><number>35</number>
+		 <!-- EUROPA --><number note='Se cierra cupos en Abril' note_type='flag' note_x='-20'>100</number>  
+         <!-- NY-CANCUN --><number>15</number>
+         <!-- FLA-CUN --><number>40</number>
+         <!-- FLA-NY --><number>52</number>
+		 <!-- FLA --><number>156</number>
+         <!-- FLA-MQT --><number>20</number>
+         <!-- HAWII --><number>10</number>
+  </row>
+  
+  	    <row>
+         <string>Inscripciones actuales</string>
+         <!--SURAMERICA --><number>5</number>
+          <!-- PANAMA --><number>1</number>
+         <!-- MEXICO --><number>1</number>
+         <!-- ARUBA --><number>14</number>
+		 <!-- EUROPA --><number>55</number>
+         <!-- NY-CANCUN --><number>16</number>
+         <!-- FLA-CUN --><number>9</number>
+          <!-- FLA-NY --><number>21</number>
+		 <!-- FLA --><number>64</number>
+        <!-- FLA-MQT --> <number>1</number>
+         <!-- HAWII --><number>7</number>
+         
+      </row> 
+	  
+	
+
+  
+</chart_data>
+   
+</chart>
+

@@ -1,0 +1,53 @@
+ /*Grid need a explicit width/height by default*/
+ #grid {
+      width: 100%;
+	  height:815px;
+	  font-size:0.9em;
+	  font-family:Verdana, Geneva, sans-serif;
+	  background-color:#FFF;
+	  cursor:hand;
+	 cursor:pointer;
+ }
+ .claro .dojoxGridHeader .dojoxGridCell{
+	 background:#888888;
+	 color:#FFF;
+	 font-family:Verdana, Geneva, sans-serif;
+	 font-weight:lighter;
+	 cursor:hand;
+	 cursor:pointer;
+ }
+ #idagencia, #idusers{
+	 color:#f00;
+	 background-color:#E0BFFB;
+	 font-family:Verdana, Geneva, sans-serif;
+ }
+.claro .dijitComboBox .dijitDownArrowButton { background-color: #BE1CE1; font-family:Verdana, Geneva, sans-serif; font-size:14px;color:#F00;} /* The grey box */
+.claro .dijitComboBox .dijitDownArrowButton .dijitArrowButtonInner { /* The arrow */
+   background: url(../imgs/flecha.png) no-repeat scroll 0 center;
+} 
+
+/* Hover */
+.claro .dijitComboBox .dijitDownArrowButtonHover { color:#F4F7FB; background-color:#F4F7FB;color:#F00;} /* The grey box */
+.claro .dijitComboBox .dijitDownArrowButtonHover .dijitArrowButtonInner {} /* The arrow  */
+
+/* Active (mouse down) */
+.claro .dijitComboBox .dijitDownArrowButtonActive { background-color: #FAD1D2; font-family:Verdana, Geneva, sans-serif; font-size:14px; color:#F00;} /* The grey box */
+.claro .dijitComboBox .dijitDownArrowButtonActive .dijitArrowButtonInner {} /* The arrow */
+
+.claro .dijitComboBoxMenu .dijitMenuItem {
+ color:#F00;;
+}
+
+.claro .dijitComboBoxMenu .dijitMenuItemHover {
+ color:#F00;;
+}
+#mainLink, #llamadaEfect{
+	color:#E6C9E7;
+}
+#mainLink:hover, #llamadaEfect:hover{
+      color:purple;
+    }
+
+#mainLink:active, #llamadaEfect:active{
+    color:red;
+}

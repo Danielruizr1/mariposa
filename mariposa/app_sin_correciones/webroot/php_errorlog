@@ -1,0 +1,8 @@
+[14-May-2012 19:27:20] PHP Fatal error:  Call to a member function find() on a non-object in /home/rociodec/public_html/sistema/seguimientos_quinceaneras/app/Controller/CiudadesController.php on line 50
+[14-May-2012 19:33:38] PHP Fatal error:  Call to a member function find() on a non-object in /home/rociodec/public_html/sistema/seguimientos_quinceaneras/app/Controller/SeguimientosController.php on line 50
+[14-May-2012 19:37:25] PHP Fatal error:  Call to a member function find() on a non-object in /home/rociodec/public_html/sistema/seguimientos_quinceaneras/app/Controller/CamposController.php on line 50
+[14-May-2012 19:38:24] PHP Fatal error:  Call to a member function find() on a non-object in /home/rociodec/public_html/sistema/seguimientos_quinceaneras/app/Controller/PermisosController.php on line 50
+[14-May-2012 19:39:41] PHP Fatal error:  Call to a member function find() on a non-object in /home/rociodec/public_html/sistema/seguimientos_quinceaneras/app/Controller/TrackersController.php on line 50
+[14-May-2012 19:41:11] PHP Fatal error:  Call to a member function find() on a non-object in /home/rociodec/public_html/sistema/seguimientos_quinceaneras/app/Controller/AgenciasSeguimientosController.php on line 50
+[14-May-2012 19:42:07] PHP Fatal error:  Call to a member function find() on a non-object in /home/rociodec/public_html/sistema/seguimientos_quinceaneras/app/Controller/AgenciasSeguimientosController.php on line 51
+[14-May-2012 19:42:46] PHP Fatal error:  Call to a member function find() on a non-object in /home/rociodec/public_html/sistema/seguimientos_quinceaneras/app/Controller/AgenciasSeguimientosController.php on line 52

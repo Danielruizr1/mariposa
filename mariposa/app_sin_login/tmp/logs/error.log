@@ -1,0 +1,87 @@
+2012-05-22 17:50:28 Error: [MissingControllerException] Controller class AdminController could not be found.
+#0 C:\Users\Akedion\Desktop\XAMPP\htdocs\subir\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-05-22 17:52:27 Error: [MissingControllerException] Controller class AdminController could not be found.
+#0 C:\Users\Akedion\Desktop\XAMPP\htdocs\subir\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-05-22 18:31:41 Error: [MissingControllerException] Controller class UsuarioController could not be found.
+#0 C:\Users\Akedion\Desktop\XAMPP\htdocs\subir\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-05-22 18:31:53 Error: [MissingControllerException] Controller class UsuarioController could not be found.
+#0 C:\Users\Akedion\Desktop\XAMPP\htdocs\subir\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-05-22 18:32:00 Error: [MissingHelperException] Helper class JavascriptHelper could not be found.
+#0 C:\Users\Akedion\Desktop\XAMPP\htdocs\subir\lib\Cake\View\View.php(850): HelperCollection->load('Javascript', Array)
+#1 C:\Users\Akedion\Desktop\XAMPP\htdocs\subir\lib\Cake\View\View.php(456): View->loadHelpers()
+#2 C:\Users\Akedion\Desktop\XAMPP\htdocs\subir\lib\Cake\Controller\Controller.php(959): View->render(NULL, NULL)
+#3 C:\Users\Akedion\Desktop\XAMPP\htdocs\subir\lib\Cake\Routing\Dispatcher.php(110): Controller->render()
+#4 C:\Users\Akedion\Desktop\XAMPP\htdocs\subir\lib\Cake\Routing\Dispatcher.php(85): Dispatcher->_invoke(Object(UsuariosController), Object(CakeRequest), Object(CakeResponse))
+#5 C:\Users\Akedion\Desktop\XAMPP\htdocs\subir\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2012-05-22 18:49:14 Error: [MissingControllerException] Controller class AdminController could not be found.
+#0 C:\Users\Akedion\Desktop\XAMPP\htdocs\subir\app\webroot\index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-05-23 09:40:12 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Seguimiento.nombrequinceanera' in 'field list'
+#0 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/lib/Cake/Model/Datasource/DboSource.php(437): PDOStatement->execute(Array)
+#1 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/lib/Cake/Model/Datasource/DboSource.php(403): DboSource->_execute('SELECT `Seguimi...', Array)
+#2 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/lib/Cake/Model/Datasource/DboSource.php(647): DboSource->execute('SELECT `Seguimi...', Array, Array)
+#3 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/lib/Cake/Model/Datasource/DboSource.php(1058): DboSource->fetchAll('SELECT `Seguimi...', false)
+#4 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/lib/Cake/Model/Model.php(2663): DboSource->read(Object(Seguimiento), Array)
+#5 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/app/Controller/AgenciasController.php(67): Model->find('list', Array)
+#6 [internal function]: AgenciasController->add()
+#7 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(AgenciasController), Array)
+#8 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#9 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(AgenciasController), Object(CakeRequest), Object(CakeResponse))
+#10 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2012-05-23 09:48:28 Error: [MissingControllerException] Controller class AgeciasController could not be found.
+#0 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-05-23 09:50:19 Error: [MissingControllerException] Controller class AgenciasSeguimeintosController could not be found.
+#0 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-05-23 09:50:25 Error: [MissingActionException] Action AgenciasSeguimientosController::index() could not be found.
+#0 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(AgenciasSeguimientosController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-05-23 09:51:37 Error: [MissingActionException] Action AgenciasSeguimientosController::index() could not be found.
+#0 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(AgenciasSeguimientosController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-05-23 10:26:11 Error: [MissingControllerException] Controller class DestinosseguimeintosController could not be found.
+#0 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-05-23 10:26:17 Error: [MissingControllerException] Controller class Destinosseguimie+ntosController could not be found.
+#0 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-05-23 10:26:22 Error: [MissingControllerException] Controller class DestinosseguimientosController could not be found.
+#0 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-05-23 12:04:54 Error: [MissingControllerException] Controller class UsersController could not be found.
+#0 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-05-23 12:05:24 Error: [MissingControllerException] Controller class UsersController could not be found.
+#0 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-05-23 12:05:25 Error: [MissingControllerException] Controller class UsersController could not be found.
+#0 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-05-23 12:06:56 Error: [MissingControllerException] Controller class UsersController could not be found.
+#0 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-05-23 12:07:39 Error: [MissingControllerException] Controller class UsersController could not be found.
+#0 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-05-23 12:12:59 Error: [MissingActionException] Action UsuariosController::views() could not be found.
+#0 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(UsuariosController), Object(CakeRequest), Object(CakeResponse))
+#2 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-05-23 12:13:08 Error: [MissingControllerException] Controller class UsersController could not be found.
+#0 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-05-23 15:35:39 Error: [MissingControllerException] Controller class UsersController could not be found.
+#0 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

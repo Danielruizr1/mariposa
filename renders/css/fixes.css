@@ -1,0 +1,28 @@
+.mainLinks:link{
+	color:#C1ACC1;
+}
+#rememberModal .modal-title {
+   color:#F64FCA;
+}
+.mainLinks:visited{
+	color:#FFFFFF;
+	font-weight: bolder;
+	font-size:15px;
+}
+.mainLinks:hover{
+	color:#FFFFFF;
+	font-weight: bolder;
+	font-size:15px;
+}
+.mainLinks:active {
+	color:#FFFFFF;
+	font-weight: bolder;
+	font-size:15px;
+}
+div#cabecera {
+	-webkit-box-shadow: inset 0px 37px 45px -17px rgba(41,0,41,0.64);
+}
+html {
+	overflow-x:hidden;
+	overflow-y:hidden;
+}

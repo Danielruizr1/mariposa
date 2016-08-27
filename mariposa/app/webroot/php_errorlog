@@ -1,0 +1,60 @@
+[24-May-2012 10:19:37] PHP Fatal error:  Call to a member function find() on a non-object in /home/rociodec/public_html/sistema/seguimientos_quinceaneras/app/Controller/AgenciasController.php on line 65
+[24-May-2012 10:52:45] PHP Fatal error:  Call to a member function find() on a non-object in /home/rociodec/public_html/sistema/seguimientos_quinceaneras/app/Controller/SeguimientosController.php on line 67
+[24-May-2012 15:38:38] PHP Fatal error:  Call to a member function allow() on a non-object in /home/rociodec/public_html/sistema/seguimientos_quinceaneras/app/Controller/UsersController.php on line 14
+[25-May-2012 09:31:59] PHP Fatal error:  Call to a member function setFlash() on a non-object in /home/rociodec/public_html/sistema/seguimientos_quinceaneras/app/Controller/UsersController.php on line 122
+[25-May-2012 09:33:23] PHP Fatal error:  Call to a member function setFlash() on a non-object in /home/rociodec/public_html/sistema/seguimientos_quinceaneras/app/Controller/UsersController.php on line 123
+[25-May-2012 09:34:13] PHP Fatal error:  Call to a member function allow() on a non-object in /home/rociodec/public_html/sistema/seguimientos_quinceaneras/app/Controller/UsersController.php on line 14
+[25-May-2012 09:35:54] PHP Fatal error:  Class 'AuthComponent' not found in /home/rociodec/public_html/sistema/seguimientos_quinceaneras/app/Model/User.php on line 34
+[25-May-2012 09:40:24] PHP Fatal error:  Call to a member function setFlash() on a non-object in /home/rociodec/public_html/sistema/seguimientos_quinceaneras/app/Controller/UsersController.php on line 123
+[25-May-2012 09:42:26] PHP Fatal error:  Call to a member function setFlash() on a non-object in /home/rociodec/public_html/sistema/seguimientos_quinceaneras/app/Controller/UsersController.php on line 136
+[25-May-2012 10:42:00] PHP Fatal error:  Cannot use object of type User as array in /home/rociodec/public_html/sistema/seguimientos_quinceaneras/app/Controller/UsersController.php on line 120
+[25-May-2012 11:00:36] PHP Fatal error:  Call to undefined method UsersController::find() in /home/rociodec/public_html/sistema/seguimientos_quinceaneras/app/Controller/UsersController.php on line 122
+[30-May-2012 18:45:38] PHP Fatal error:  Call to a member function find() on a non-object in /home/rociodec/public_html/sistema/mariposa/app/Controller/PermisosController.php on line 156
+[30-May-2012 18:46:32] PHP Fatal error:  Call to a member function find() on a non-object in /home/rociodec/public_html/sistema/mariposa/app/Controller/PermisosController.php on line 157
+[31-May-2012 09:34:07] PHP Fatal error:  Class 'tablas' not found in /home/rociodec/public_html/sistema/mariposa/app/Controller/PermisosController.php on line 157
+[31-May-2012 09:41:41] PHP Fatal error:  Call to a member function find() on a non-object in /home/rociodec/public_html/sistema/mariposa/app/Controller/PermisosController.php on line 160
+[31-May-2012 15:44:37] PHP Fatal error:  Call to a member function find() on a non-object in /home/rociodec/public_html/sistema/mariposa/app/Controller/PermisosController.php on line 158
+[31-May-2012 15:56:26] PHP Fatal error:  Call to a member function find() on a non-object in /home/rociodec/public_html/sistema/mariposa/app/Controller/PermisosController.php on line 158
+[31-May-2012 15:58:40] PHP Fatal error:  Call to a member function find() on a non-object in /home/rociodec/public_html/sistema/mariposa/app/Controller/PermisosController.php on line 159
+[31-May-2012 15:58:55] PHP Fatal error:  Call to a member function find() on a non-object in /home/rociodec/public_html/sistema/mariposa/app/Controller/PermisosController.php on line 159
+[31-May-2012 15:59:19] PHP Fatal error:  Call to a member function find() on a non-object in /home/rociodec/public_html/sistema/mariposa/app/Controller/PermisosController.php on line 160
+[04-Jun-2012 09:41:13] PHP Fatal error:  Call to undefined method PermisosController::find() in /home/rociodec/public_html/sistema/mariposa/app/Controller/UsersController.php on line 204
+[04-Jun-2012 09:42:40] PHP Fatal error:  Class 'PermisosController' not found in /home/rociodec/public_html/sistema/mariposa/app/Controller/UsersController.php on line 203
+[04-Jun-2012 09:46:03] PHP Fatal error:  Call to undefined method TablasController::find() in /home/rociodec/public_html/sistema/mariposa/app/Controller/UsersController.php on line 204
+[04-Jun-2012 09:48:39] PHP Fatal error:  Call to a member function find() on a non-object in /home/rociodec/public_html/sistema/mariposa/app/Controller/UsersController.php on line 204
+[13-Jun-2012 10:41:34] PHP Fatal error:  Class 'Ciudad' not found in /home/rociodec/public_html/sistema/mariposa/app/Controller/MenusController.php on line 38
+[14-Jun-2012 11:51:39] PHP Fatal error:  Call to a member function find() on a non-object in /home/rociodec/public_html/sistema/mariposa/app/Controller/MenusController.php on line 45
+[14-Jun-2012 13:56:02] PHP Fatal error:  Class 'Seguimiento' not found in /home/rociodec/public_html/sistema/mariposa/app/Controller/MenusController.php on line 43
+[04-Jul-2012 11:56:11] PHP Fatal error:  Class 'DboSource' not found in /home/rociodec/public_html/sistema/mariposa/lib/Cake/Model/Datasource/Database/Mysql.php on line 29
+[19-Jul-2012 12:10:14] PHP Fatal error:  Call to undefined function  salvabitacora() in /home/rociodec/public_html/sistema/mariposa/app/Controller/SeguimientosController.php on line 316
+[31-Jul-2012 10:35:02] PHP Fatal error:  Class 'Tracker' not found in /home/rociodec/public_html/sistema/mariposa/app/Controller/MenusController.php on line 44
+[31-Jul-2012 10:36:05] PHP Fatal error:  Class 'Tracker' not found in /home/rociodec/public_html/sistema/mariposa/app/Controller/MenusController.php on line 44
+[31-Jul-2012 10:44:01] PHP Fatal error:  Class 'Trackers' not found in /home/rociodec/public_html/sistema/mariposa/app/Controller/MenusController.php on line 44
+[31-Jul-2012 10:51:25] PHP Fatal error:  Call to undefined function  find() in /home/rociodec/public_html/sistema/mariposa/app/Controller/MenusController.php on line 56
+[02-Aug-2012 11:05:55] PHP Fatal error:  Cannot redeclare SeguimientosController::enviacorreo() in /home/rociodec/public_html/sistema/mariposa/app/Controller/SeguimientosController.php on line 368
+[02-Aug-2012 11:33:26] PHP Fatal error:  Cannot redeclare Seguimiento::agregatracker() in /home/rociodec/public_html/sistema/mariposa/app/Model/Seguimiento.php on line 106
+[02-Aug-2012 19:05:18] PHP Parse error:  syntax error, unexpected $end in /home/rociodec/public_html/sistema/mariposa/app/View/Layouts/default.ctp on line 73
+[13-Aug-2012 10:48:08] PHP Fatal error:  Cannot redeclare UsersController::beforeFilter() in /home/rociodec/public_html/sistema/mariposa/app/Controller/UsersController.php on line 19
+[13-Aug-2012 10:59:26] PHP Fatal error:  Call to a member function input() on a non-object in /home/rociodec/public_html/sistema/mariposa/app/View/Users/login.ctp on line 10
+[18-Aug-2012 10:36:34] PHP Fatal error:  Call to a member function query() on a non-object in /home/rociodec/public_html/sistema/mariposa/app/Model/Seguimiento.php on line 125
+[25-Feb-2013 23:31:13] PHP Fatal error:  Maximum execution time of 45 seconds exceeded in /home/grupooka/public_html/v15/mariposa/lib/Cake/Model/Datasource/DboSource.php on line 437
+[25-Feb-2013 23:32:08] PHP Fatal error:  Maximum execution time of 45 seconds exceeded in /home/grupooka/public_html/v15/mariposa/lib/Cake/Model/Model.php on line 3410
+[04-Mar-2013 10:28:11] PHP Fatal error:  Maximum execution time of 45 seconds exceeded in /home/grupooka/public_html/v15/mariposa/lib/Cake/Model/Datasource/DboSource.php on line 2472
+[04-Mar-2013 10:29:28] PHP Fatal error:  Maximum execution time of 45 seconds exceeded in /home/grupooka/public_html/v15/mariposa/lib/Cake/Model/Datasource/Database/Mysql.php on line 225
+[06-Mar-2013 23:58:51] PHP Parse error:  syntax error, unexpected $end in /home/grupooka/public_html/v15/mariposa/app/View/Layouts/default.ctp on line 41
+[08-Mar-2013 08:41:40] PHP Warning:  unlink(/home/grupooka/public_html/v15/mariposa/app/tmp/cache/persistent/myapp_cake_core_cake_dev_es-es) [<a href='function.unlink'>function.unlink</a>]: No such file or directory in /home/grupooka/public_html/v15/mariposa/lib/Cake/Cache/Engine/FileEngine.php on line 247
+[08-Mar-2013 16:26:31] PHP Fatal error:  Call to a member function exists() on a non-object in /home/grupooka/public_html/v15/mariposa/app/Controller/SeguimientosController.php on line 43
+[08-Mar-2013 16:27:04] PHP Fatal error:  Call to a member function exists() on a non-object in /home/grupooka/public_html/v15/mariposa/app/Controller/SeguimientosController.php on line 43
+[08-Mar-2013 16:27:06] PHP Fatal error:  Call to a member function exists() on a non-object in /home/grupooka/public_html/v15/mariposa/app/Controller/SeguimientosController.php on line 43
+[14-Mar-2013 16:16:34] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 77 bytes) in /home/grupooka/public_html/v15/mariposa/lib/Cake/Model/Datasource/DboSource.php on line 1414
+[14-Mar-2013 16:19:34] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 24 bytes) in /home/grupooka/public_html/v15/mariposa/lib/Cake/Model/Datasource/DboSource.php on line 1414
+[14-Mar-2013 16:40:28] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 64 bytes) in /home/grupooka/public_html/v15/mariposa/lib/Cake/Model/Datasource/DboSource.php on line 1414
+[14-Mar-2013 16:43:35] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 78 bytes) in /home/grupooka/public_html/v15/mariposa/lib/Cake/Model/Datasource/DboSource.php on line 1414
+[14-Mar-2013 16:47:50] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 77 bytes) in /home/grupooka/public_html/v15/mariposa/lib/Cake/Model/Datasource/DboSource.php on line 1414
+[14-Mar-2013 16:48:59] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 24 bytes) in /home/grupooka/public_html/v15/mariposa/lib/Cake/Model/Datasource/DboSource.php on line 1414
+[14-Mar-2013 16:49:03] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 91 bytes) in /home/grupooka/public_html/v15/mariposa/lib/Cake/Model/Datasource/DboSource.php on line 1414
+[14-Mar-2013 16:50:42] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 78 bytes) in /home/grupooka/public_html/v15/mariposa/lib/Cake/Model/Datasource/DboSource.php on line 1414
+[14-Mar-2013 16:58:50] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 77 bytes) in /home/grupooka/public_html/v15/mariposa/lib/Cake/Model/Datasource/DboSource.php on line 1418
+[14-Mar-2013 16:59:50] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 78 bytes) in /home/grupooka/public_html/v15/mariposa/lib/Cake/Model/Datasource/DboSource.php on line 1418
+[14-Mar-2013 17:05:16] PHP Fatal error:  Allowed memory size of 134217728 bytes exhausted (tried to allocate 78 bytes) in /home/grupooka/public_html/v15/mariposa/lib/Cake/Model/Datasource/DboSource.php on line 1418
+[03-Apr-2013 12:46:19] PHP Fatal error:  Maximum execution time of 45 seconds exceeded in /home/grupooka/public_html/v15/mariposa/lib/Cake/Utility/Debugger.php on line 488

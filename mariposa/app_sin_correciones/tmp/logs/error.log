@@ -1,0 +1,34 @@
+2012-05-14 19:35:28 Error: [MissingControllerException] Controller class SeguimientodController could not be found.
+#0 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-05-14 19:40:54 Error: [MissingControllerException] Controller class AgendaSeguimientosController could not be found.
+#0 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-05-16 15:41:42 Error: [MissingControllerException] Controller class SegumientosController could not be found.
+#0 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-05-16 15:48:55 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`rociodec_seguimiento/permisos`, CONSTRAINT `permisos_ibfk_2` FOREIGN KEY (`usuarios_id`) REFERENCES `usuarios` (`id`))
+#0 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/lib/Cake/Model/Datasource/DboSource.php(437): PDOStatement->execute(Array)
+#1 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/lib/Cake/Model/Datasource/DboSource.php(403): DboSource->_execute('DELETE `Usuario...', Array)
+#2 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/lib/Cake/Model/Datasource/Database/Mysql.php(417): DboSource->execute('DELETE `Usuario...')
+#3 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/lib/Cake/Model/Model.php(2415): Mysql->delete(Object(Usuario), Array)
+#4 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/app/Controller/UsuariosController.php(89): Model->delete()
+#5 [internal function]: UsuariosController->delete('1')
+#6 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(UsuariosController), Array)
+#7 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#8 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(UsuariosController), Object(CakeRequest), Object(CakeResponse))
+#9 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2012-05-16 15:50:03 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Usuarios.mail' in 'field list'
+#0 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/lib/Cake/Model/Datasource/DboSource.php(437): PDOStatement->execute(Array)
+#1 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/lib/Cake/Model/Datasource/DboSource.php(403): DboSource->_execute('SELECT `Usuario...', Array)
+#2 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/lib/Cake/Model/Datasource/DboSource.php(647): DboSource->execute('SELECT `Usuario...', Array, Array)
+#3 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/lib/Cake/Model/Datasource/DboSource.php(1058): DboSource->fetchAll('SELECT `Usuario...', false)
+#4 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/lib/Cake/Model/Model.php(2663): DboSource->read(Object(AppModel), Array)
+#5 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/app/Controller/SeguimientosController.php(50): Model->find('list', Array)
+#6 [internal function]: SeguimientosController->add()
+#7 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/lib/Cake/Controller/Controller.php(485): ReflectionMethod->invokeArgs(Object(SeguimientosController), Array)
+#8 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#9 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(SeguimientosController), Object(CakeRequest), Object(CakeResponse))
+#10 /home/rociodec/public_html/sistema/seguimientos_quinceaneras/app/webroot/index.php(97): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
