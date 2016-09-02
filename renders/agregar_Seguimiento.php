@@ -13,7 +13,14 @@
     <!-- Override de estilos del grid para vinculaciones, este override se hace de la clase Claro de Dojo -->
     
    </head>
-     <body>
+     <body ng-controller="AlertController as alert">
+     <div class="warning">
+       <p>Bitacora se ha guardado con exito </p>
+     </div>
+
+
+
+
      <div id="confirmModal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
       <div class="modal-dialog modal-sm">
           <div class="modal-content">
@@ -29,7 +36,7 @@
     </div>
 
      <div class="loader"></div>
-     <div ng-controller="AlertController as alert" class="container-fluid form-container">
+     <div  class="container-fluid form-container">
      <div class="close closeTable" ng-click="close()" ng-show="visible"><span aria-hidden='true'>&times;</span></div>
      <div class="row " >
      <div class="segTable" ng-show="visible && filteredItems.length">

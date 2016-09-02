@@ -1306,7 +1306,7 @@ inscripcionAlmacen.query({}).forEach(function(seg){
    <?php if(isset($_SESSION['Auth'])){?>
    <script type="text/javascript">
    
-   setInterval(function(){recargaDatos();}, 30000);
+   setInterval(function(){recargaDatos();}, 300000);
 	 //document.getElementById('header').style.width='100%';
 	 //Funciones para activar o desactivar la carga de informacion
 	 function cargaDatos(){ 
@@ -1333,7 +1333,7 @@ inscripcionAlmacen.query({}).forEach(function(seg){
 	  	 var date = new Date();
 	  	 var hours = date.getHours();
 	  	 var min = date.getMinutes();
-	  	 if(hours == 15 && min >= 0 && min < 4){
+	  	 if(hours == 15 && min >= 0 && min < 5){
              
 	         var count = 0;
 	         bitacoraHoyAlmacen.query({usuario:idusuarioactivo}).forEach(function(bita){

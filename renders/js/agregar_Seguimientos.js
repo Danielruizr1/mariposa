@@ -1,6 +1,8 @@
 var app = angular.module("seguimientos", []);
 
 app.controller("AlertController", function($scope, $filter){
+
+		var controller = this;
   
         $scope.seguimientos = window.parent.seguimiento; 
         $scope.visible = false;
@@ -22,6 +24,9 @@ app.controller("AlertController", function($scope, $filter){
         	console.log(val);
 
         }
+
+
+        
         
 });
 $(document).ready(function(e) {	

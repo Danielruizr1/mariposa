@@ -37,6 +37,16 @@
 	  
 	 }	
 
+Seguimiento.prototype.alertBitacora = function() {
+	$('.warning').addClass("show");
+
+	window.setTimeout(function(){
+		$('.warning').removeClass("show");
+
+	},3000);
+
+
+};
 
 
 Seguimiento.prototype.required = function() {
@@ -171,6 +181,7 @@ Seguimiento.prototype.setBitacora = function() {
 }	
 
 Seguimiento.prototype.saveBitacora = function() {
+	var controller = this;
 	var urls = {};
 	   urls.seg = "/v15/mariposa/seguimientos/recibeBitacora";
 	   urls.insc = "/v15/mariposa/inscripcions/recibeBitacora";
@@ -191,6 +202,8 @@ Seguimiento.prototype.saveBitacora = function() {
 		  context: this
 		})
 		  .done(function( idBitacora ) {
+			  	controller.alertBitacora();
+
 		       bitacora.id = idBitacora;
 		       this.data.bitacora = alert;
 		       if(this.url == "seg"){
