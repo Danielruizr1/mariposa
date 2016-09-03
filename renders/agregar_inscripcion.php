@@ -1075,7 +1075,7 @@
                 <div id="docDiv">
         <div><br /></div>
         <table id="docTable">
-          <tr id="headerRow"><th>Documento</th><th>Recibido</th><th>Aprobado</th><th>Fecha Recibido</th><th>Fecha Aprobado</th><th>Aprobado Por</th><th>Documento</th><th>Comentarios</th></tr>
+          <tr id="headerRow"><th>Documento</th><th>Recibido</th><th>Aprobado</th><th>Fecha Recibido</th><th>Fecha Aprobado</th><th>Aprobado Por</th><th>Documento</th><th>Comentarios</th><th>Abreviatura</th><th>Proceso</th></tr>
         </table>  
       </diV>
               </div><!-- Tab -->

@@ -124,12 +124,14 @@ Inscripcion.prototype.setDocs = function(){
        }
          documento = window.parent.DocumentosAlmacen.get(insc.doc_id);
 
+         if(documento){
+           if(insc.aprovadoPor){user = window.parent.UsuariosAlmacen.get(insc.aprovadoPor);}else{user.nombre = "";}
+           if(insc.documento){$("<tr class='added'><td>"+documento.nombre+"</td><td><input type='checkbox' id='recibido"+insc.id+"' class='recibidoCheck' value='1'></td><td><input type='checkbox' id='aprovado"+insc.id+"' class='aprobadoCheck' value='2'></td><td>"+fechatotalR+"</td><td>"+fechatotalp+"</td><td>"+user.nombre+"</td><td><a href='/v15/mariposa/"+insc.documento+"' target='_Blank'>ver: "+documento.nombre+"</a></td><td class='onHover'><div class='onclick' data-insc='"+insc.id +"' >"+insc.nota+"</div></td></tr><tr>"+incs.abreviatura+"</tr><tr>"+incs.proceso+"</tr>").appendTo("#docTable");}
+           else {$("<tr class='added'><td>"+documento.nombre+"</td><td><input type='checkbox' id='recibido"+insc.id+"' class='recibidoCheck' value='1'></td><td><input type='checkbox' id='aprovado"+insc.id+"' class='aprobadoCheck' value='2'></td><td>"+fechatotalR+"</td><td>"+fechatotalp+"</td><td>"+user.nombre+"</td><td><form id='documentoForm"+insc.id+"' enctype='multipart/form-data'><input type='file' id='doc"+insc.id+"' class='elDocumento'><button type='button' class='btn btn-primary saveDoc' value='"+insc.id+"' style='background-color:#96689F'>Subir</button></form></td><td class='onHover'><div class='onclick' data-insc='"+insc.id +"' >"+insc.nota+"</div></td></tr>").appendTo("#docTable");}
+           if(insc.recibido == "1"){$("#recibido"+parseInt(insc.id)).prop('checked', true);}
+           if(insc.aprovado == "1"){$("#aprovado"+parseInt(insc.id)).prop('checked', true);}
 
-         if(insc.aprovadoPor){user = window.parent.UsuariosAlmacen.get(insc.aprovadoPor);}else{user.nombre = "";}
-         if(insc.documento){$("<tr class='added'><td>"+documento.nombre+"</td><td><input type='checkbox' id='recibido"+insc.id+"' class='recibidoCheck' value='1'></td><td><input type='checkbox' id='aprovado"+insc.id+"' class='aprobadoCheck' value='2'></td><td>"+fechatotalR+"</td><td>"+fechatotalp+"</td><td>"+user.nombre+"</td><td><a href='/v15/mariposa/"+insc.documento+"' target='_Blank'>ver: "+documento.nombre+"</a></td><td class='onHover'><div class='onclick' data-insc='"+insc.id +"' >"+insc.nota+"</div></td></tr>").appendTo("#docTable");}
-         else {$("<tr class='added'><td>"+documento.nombre+"</td><td><input type='checkbox' id='recibido"+insc.id+"' class='recibidoCheck' value='1'></td><td><input type='checkbox' id='aprovado"+insc.id+"' class='aprobadoCheck' value='2'></td><td>"+fechatotalR+"</td><td>"+fechatotalp+"</td><td>"+user.nombre+"</td><td><form id='documentoForm"+insc.id+"' enctype='multipart/form-data'><input type='file' id='doc"+insc.id+"' class='elDocumento'><button type='button' class='btn btn-primary saveDoc' value='"+insc.id+"' style='background-color:#96689F'>Subir</button></form></td><td class='onHover'><div class='onclick' data-insc='"+insc.id +"' >"+insc.nota+"</div></td></tr>").appendTo("#docTable");}
-         if(insc.recibido == "1"){$("#recibido"+parseInt(insc.id)).prop('checked', true);}
-         if(insc.aprovado == "1"){$("#aprovado"+parseInt(insc.id)).prop('checked', true);}
+         };
    });
 }
 
