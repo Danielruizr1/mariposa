@@ -9,6 +9,7 @@ app.controller("AlertController", function($scope, $filter){
         $scope.toDisplay = 10;
         $scope.filteredItems = [];
         $scope.search = '';
+        $scope.searchKey = '';
         $scope.close = function() {
         	$scope.visible = false;
         }
@@ -19,8 +20,9 @@ app.controller("AlertController", function($scope, $filter){
 	        $scope.visible = false;
        });
 
-        $scope.changeSearch = function(val) {
+        $scope.changeSearch = function(val, key) {
         	$scope.search = val;
+        	$scope.searchKey = key;
         	console.log(val);
 
         }

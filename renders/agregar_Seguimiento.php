@@ -15,7 +15,7 @@
    </head>
      <body ng-controller="AlertController as alert">
      <div class="warning">
-       <p>Bitacora se ha guardado con exito </p>
+       <p>Bitacora se ha guardado con éxito </p>
      </div>
 
 
@@ -42,7 +42,7 @@
      <div class="segTable" ng-show="visible && filteredItems.length">
           <table class="table table-hover table-condensed"  >
           <tr><th>ID</th><th>Quinceañera</th> <th>Contacto</th><th>Vendedor</th><th>Agencia</th><th>direccion</th><th>Telefono</th><th>Telefono2</th><th>Celular</th><th>Email</th><th>Email Quinceañera</th><th>Colegio</th><th>Padre</th><th>Madre</th><th>Cel Padre</th><th>Cel Madre</th></tr>
-          <tr ng-repeat="seguimiento in filteredItems = ( seguimientos | filter:search ) |  limitTo:toDisplay"  data-id="{{seguimiento.id}}" class="segRow">
+          <tr ng-repeat="seguimiento in filteredItems = ( seguimientos | filter:search:true:searchKey ) |  limitTo:toDisplay"  data-id="{{seguimiento.id}}" class="segRow">
             <td>{{seguimiento.id}}</td>
             <td>{{seguimiento.nombrequinceanera}}</td>
             <td>{{seguimiento.nombrequienllama}}</td>
@@ -156,7 +156,7 @@
                 <div class="col-sm-4">
                    <div class="form-group">
                        <label for="nombrequienllama" id="titulo">Contacto: (Nombre y Apellido<font color="#FF0000">*</font>)</label><br/>
-                       <input  ng-change="changeSearch(find.nombrequienllama)" ng-model="find.nombrequienllama" class="form-control check check2 nombre requiredd" data-nombre="Contacto:"  name="data[Seguimiento][nombre]" id="nombrequienllama" trim="true">
+                       <input  ng-blur="changeSearch(find.nombrequienllama, 'nombrequienllama')" ng-model="find.nombrequienllama" class="form-control check check2 nombre requiredd" data-nombre="Contacto:"  name="data[Seguimiento][nombre]" id="nombrequienllama" trim="true">
                    </div>
                 </div>
                 <div class="col-sm-4">
@@ -171,7 +171,7 @@
                 <div class="col-sm-4">
                    <div class="form-group">
                         <label for="telefono1" id="titulo">Teléfono Fijo 1: (<font color="#FF0000">*</font>)</label>
-                        <input  ng-change="changeSearch(ind.telefono1)" ng-model="find.telefono1" class="form-control check requiredd" data-nombre="Telefono Fijo 1:" name="data[Seguimiento][telefono1]"  id="telefono1">
+                        <input  ng-blur="changeSearch(find.telefono1, 'telefono1')" ng-model="find.telefono1" class="form-control check requiredd" data-nombre="Telefono Fijo 1:" name="data[Seguimiento][telefono1]"  id="telefono1">
                    </div>
                 </div>               
              </div>
@@ -179,19 +179,19 @@
                 <div class="col-sm-4">
                    <div class="form-group">
                        <label for="telefono2" id="titulo">Teléfono Fijo 2:</label><br/>
-                       <input  ng-change="changeSearch(find.telefono2)" ng-model="find.telefono2" class="form-control check" data-nombre="Telefono Fijo 2:" name="data[Seguimiento][telefono2]" id="telefono2">
+                       <input  ng-blur="changeSearch(find.telefono2, 'telefono2')" ng-model="find.telefono2" class="form-control check" data-nombre="Telefono Fijo 2:" name="data[Seguimiento][telefono2]" id="telefono2">
                    </div>
                 </div>
                 <div class="col-sm-4">
                    <div class="form-group">
                        <label for="telefono3" id="titulo">Teléfono Fijo 3:</label><br/>
-                       <input  ng-change="changeSearch(find.telefono3)" ng-model="find.telefono3" class="form-control check" data-nombre="Telefono Fijo 3:" name="data[Seguimiento][telefono3]" id="telefono3">
+                       <input  ng-blur="changeSearch(find.telefono3, 'telefono3')" ng-model="find.telefono3" class="form-control check" data-nombre="Telefono Fijo 3:" name="data[Seguimiento][telefono3]" id="telefono3">
                    </div>
                 </div>
                 <div class="col-sm-4">
                    <div class="form-group">
                         <label for="celular" id="titulo">Celular:   (<font color="#FF0000">*</font>)</label></br>
-                        <input  ng-change="changeSearch(find.celular)" ng-model="find.celular" class="form-control check check2 celular requiredd" data-nombre="Celular:" name="data[Seguimiento][celular]" id="celular">
+                        <input  ng-blur="changeSearch(find.celular, 'celular')" ng-model="find.celular" class="form-control check check2 celular requiredd" data-nombre="Celular:" name="data[Seguimiento][celular]" id="celular">
                    </div>
                 </div>               
              </div>
@@ -205,7 +205,7 @@
                 <div class="col-sm-4">
                    <div class="form-group">
                         <label for="email" id="titulo">E-mail: (<font color="#FF0000">*</font>)</label><img src="imgs/mail.gif" border="0" class="mailClick" data-id="email" onMouseOver="document.body.style.cursor='pointer';" onMouseOut="document.body.style.cursor='pointer';"/><br/>
-                        <input  ng-change="changeSearch(find.email)" ng-model="find.email" type="email" class="form-control check check2 email requiredd" data-nombre="Email:" id="email">
+                        <input  ng-blur="changeSearch(find.email, 'email')" ng-model="find.email" type="email" class="form-control check check2 email requiredd" data-nombre="Email:" id="email">
                    </div>
                 </div>
                 <div class="col-sm-4">
@@ -258,7 +258,7 @@
                <div class="col-sm-4">
                    <div class="form-group">
                         <label for="nombrequinceanera" id="titulo">Nombre: (Apellido y Nombre<font color="#FF0000">*</font>)</label><br/>
-                        <input  ng-change="changeSearch(find.nombrequinceanera)" ng-model="find.nombrequinceanera" class="form-control check nombre14 requiredd" data-nombre="Nombre Quinceañera:" id="nombrequinceanera">
+                        <input  ng-blur="changeSearch(find.nombrequinceanera, 'nombrequinceanera')" ng-model="find.nombrequinceanera" class="form-control check nombre14 requiredd" data-nombre="Nombre Quinceañera:" id="nombrequinceanera">
                    </div>
                 </div>
                 <div class="col-sm-4">
