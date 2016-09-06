@@ -549,6 +549,7 @@ public function recibeajax(){
 		$contador=" ";
 		$esta=0;
 		$arrayinfo=array();
+		 $arrayinfo['CRUCERO POR EL CARIBE']=array('dias'=>'9','texto'=>'Diciembre','desc'=>'Playa, brisa y mar con todo incluido: Cartagena ~ Colombia | Montego Bay ~ Jamaica | George Town ~ Islas Caimán | Puerto Limón ~ Costa Rica | Colón ~ Panamá','color'=>'#7f5aa3','viaje'=>'39','descripcion'=>'2');
 		$arrayinfo['FLORIDA']=array('dias'=>'15','texto'=>'Junio & Diciembre','desc'=>'Orlando – Crucero a Bahamas & Miami','color'=>'#db318a','viaje'=>'3','descripcion'=>'4');
 		$arrayinfo['FLORIDA & CANCUN']=array('dias'=>'20','texto'=>'Junio & Diciembre','desc'=>'Orlando – Crucero a Bahamas - Miami - Riviera Maya & Cancún','color'=>'#db318a','viaje'=>'9','descripcion'=>'10');
 		$arrayinfo['FLORIDA & NEW YORK']=array('dias'=>'20','texto'=>'Junio','desc'=>'Orlando – Crucero a Bahamas – Miami - New York - Washington D.C. & Cataratas del Niágara','color'=>'#db318a','viaje'=>'19','descripcion'=>'20');
@@ -566,7 +567,7 @@ $arrayinfo['PANAMA']=array('dias'=>'6','texto'=>'Junio & Diciembre','desc'=>'Pla
 $arrayinfo['HAWAII']=array('dias'=>'14','texto'=>'Junio','desc'=>'Las Vegas - Grand Canyon - Honolulu & Los Ángeles','color'=>'#E79AB7','viaje'=>'25','descripcion'=>'26');
     
 	   $arrayinfo['FLORIDA - CHICAGO & MARQUETTE']=array('dias'=>'20','texto'=>'Diciembre','desc'=>'Orlando - Crucero a Bahamas - Miami - Chicago & Marquette','color'=>'#196F9E','viaje'=>'1','descripcion'=>'2','viaje'=>'11','descripcion'=>'12');
- $arrayinfo['CRUCERO POR EL CARIBE']=array('dias'=>'9','texto'=>'Diciembre','desc'=>'Playa, brisa y mar con todo incluido, comida, helados, postres ilimitados.','color'=>'#7f5aa3','viaje'=>'0','descripcion'=>'2');
+
 	
 			
 			
