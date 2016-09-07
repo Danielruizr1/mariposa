@@ -23,14 +23,32 @@ app.controller("AlertController", function($scope, $filter){
         $scope.changeSearch = function(val, key) {
         	$scope.search = val;
         	$scope.searchKey = key;
-        	console.log(val);
+
+        	$scope.filtered = $scope.seguimientos.filter(segFilter);
+        	//$scope.$apply();
 
         }
+
+
+        function segFilter (value){
+
+        	if (typeof value[$scope.searchKey] === 'string') return value[$scope.searchKey].toLowerCase() == $scope.search.toLowerCase();
+
+        	return value[$scope.searchKey] == $scope.search;
+
+
+        	
+	
+		}
 
 
         
         
 });
+
+
+
+
 $(document).ready(function(e) {	
      lists.agencia = {};
      lists.ciudad = {};
