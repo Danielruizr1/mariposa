@@ -44,7 +44,7 @@
      <div class="segTable" ng-show="visible && filtered.length">
           <table class="table table-hover table-condensed"  >
           <tr><th>ID</th><th>Quinceañera</th> <th>Contacto</th><th>Vendedor</th><th>Agencia</th><th>direccion</th><th>Telefono</th><th>Telefono2</th><th>Celular</th><th>Email</th><th>Email Quinceañera</th><th>Colegio</th><th>Padre</th><th>Madre</th><th>Cel Padre</th><th>Cel Madre</th></tr>
-          <tr ng-repeat="seguimiento in filtered | limitTo:5 track by seguimiento.id "  data-id="{{seguimiento.id}}" class="segRow">
+          <tr ng-repeat="seguimiento in filtered | limitTo:20 track by seguimiento.id "  data-id="{{seguimiento.id}}" class="segRow">
             <td>{{seguimiento.id}}</td>
             <td>{{seguimiento.nombrequinceanera}}</td>
             <td>{{seguimiento.nombrequienllama}}</td>
