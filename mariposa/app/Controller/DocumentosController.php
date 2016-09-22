@@ -24,7 +24,27 @@ public function index($id = null) {
 		$this->set('documentos', $this->paginate());
 	}
 
-public function admin_add() {
+public function admin_add($id = null) {
+
+	if ($id){
+		$this->Documento->id = $id;
+		if (!$this->Documento->exists()) {
+			throw new NotFoundException(__('Invalid Documento'));
+		}
+		$this->set('documento', $this->Documento->read(null, $id));
+		if ($this->request->is('post') || $this->request->is('put')) {
+			if ($this->Documento->save($this->request->data)) {
+				$this->Session->setFlash(__('El Documento fue editado satisfactoriamente'));
+				$this->redirect(array('action' => 'index'));
+			} else {
+				$this->Session->setFlash(__('No se pudo editar el Documento, por favor intentelo más tarde.'));
+			}
+		}
+
+	}
+
+	if(!$id){
+		$this->set('documento', false);
 		if ($this->request->is('post')) {
 			$this->Documento->create();
 			if ($this->Documento->save($this->request->data)) {
@@ -35,6 +55,7 @@ public function admin_add() {
 			}
 		}
 	}
+}
 
 
 

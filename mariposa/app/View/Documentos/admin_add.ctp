@@ -3,7 +3,15 @@
 	<fieldset>
 		<legend><?php echo __('Agregar Documento'); ?></legend>
 	<?php
-		echo $this->Form->input('nombre');
+    if($documento != false){
+  		echo $this->Form->input('nombre', array('value' => $documento['Documento']['nombre'] ));
+      echo $this->Form->input('abreviatura', array('value' => $documento['Documento']['abreviatura'] ));
+      echo $this->Form->input('proceso', array('value' => $documento['Documento']['proceso'] ));
+    } else {
+      echo $this->Form->input('nombre');
+      echo $this->Form->input('abreviatura');
+      echo $this->Form->input('proceso');
+    }
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Guardar'));?>

@@ -13,21 +13,9 @@
         </select>
         <select class="form-control" id="destino" name="tipo" style="max-width:300px;display:inline">
         <option>Destino</option>
-         <option>FLA</option>
-         <option>EUR</option>
-         <option>MEX</option>
-         <option>FLA_CUN</option>
-         <option>FLA_MQT</option>
-         <option>SURA_VER</option>
-         <option>CXC</option>
-         <option>PTY</option>
-         <option>FLA_NY</option>
-         <option>NY_CUN</option>
-         <option>SURA_COMB_PER</option>
-         <option>HW</option>
-         <option>EUR2</option>
-         <option>CUR_AUA</option>
-         <option>ORM</option>
+        <?php foreach ($destinos as $value) { ?>
+            <option><?php echo $value['destinos']['nombre'] ?></option>
+        <?php } ?>
          </select>
        </div>
 	</div>
@@ -67,7 +55,17 @@
          <option value="18">Nathalia</option>
         </select>
         <select class="form-control" id="donde" name="tipo2" style="max-width:300px;display:inline">
+
         <option>Destino</option>
+        <?php foreach ($destinos as $value) { ?>
+            <option><?php echo $value['destinos']['nombre'] ?></option>
+        <?php } ?>
+        
+
+        
+
+
+        <!--
          <option>FLA</option>
          <option>EUR</option>
          <option>MEX</option>
@@ -82,7 +80,7 @@
          <option>HW</option>
          <option>EUR2</option>
          <option>CUR_AUA</option>
-         <option>ORM</option>
+         <option>ORM</option>-->
          </select>
        </div>
     </div>

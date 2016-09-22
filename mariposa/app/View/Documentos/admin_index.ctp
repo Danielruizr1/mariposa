@@ -11,12 +11,16 @@
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo 'Nombre';?></th>
+            <th><?php echo 'Abreviatura';?></th>
+            <th><?php echo 'Proceso';?></th>
 			<th><?php echo 'Borrar';?></th>
 	</tr>
 	<?php
 	foreach ($documentos as $documento): ?>
 	<tr>
-		<td><?php echo $this->Html->link($this->Html->image('editar.png', array('alt' => __('Editar usuario'), 'border' => '0')), array('action' => 'edit', $documento['Documento']['id']),array('escape' => false)); ?><?php echo $documento['Documento']['nombre']; ?>&nbsp;</td>
+		<td><?php echo $this->Html->link($this->Html->image('editar.png', array('alt' => __('Editar usuario'), 'border' => '0')), array('action' => 'add', $documento['Documento']['id']),array('escape' => false)); ?><?php echo $documento['Documento']['nombre']; ?>&nbsp;</td>
+        <td><?php echo $documento['Documento']['abreviatura']; ?>&nbsp;</td>
+        <td><?php echo $documento['Documento']['proceso']; ?>&nbsp;</td>
     <td style="text-align:center"> <?php echo $this->Form->postLink($this->Html->image('borrar.png', array('alt' => __('Borrar usuario'), 'border' => '0')), array('action' => 'delete', $documento['Documento']['id']), array('escape' => false), __('Desea borrar la tabla %s?', $documento['Documento']['id'])); ?></td>
 	</tr>
 <?php endforeach; ?>

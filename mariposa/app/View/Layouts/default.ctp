@@ -58,11 +58,22 @@ header ("Pragma: no-cache");
     <?php } ?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+    
+   
+    <?php 
+    if(isset($_SESSION['Auth'])){?>
+	     <script type="text/javascript" src="../assets/js/googleauth.js"></script>
+    	 
+    <?php } ?>
+
+
+
     <script type="text/javascript">
-      
       
 
 	<?php 
+
+
 	//@eduardo:Restriccion de codigo para que unicamente se muestre cuando el usuario se ha autenticado en la aplicación
 	if(isset($_SESSION['Auth'])){?>
 		var whatIsNow="Seg";
@@ -1259,7 +1270,7 @@ inscripcionAlmacen.query({}).forEach(function(seg){
             </div> 
            </div>
            <div style="float:right; width:49%;height:70px; margin-top:-15px; margin-right:-200px;">
-             <div style="width:100%; text-align:right; padding-top:2em; margin-left:-4.5em;"><h3 style="font-family:Verdana, Geneva, sans-serif; color:#fff; font-size:19px;"><?php echo __('Mariposa 3.0'); ?></h3>
+             <div style="width:100%; text-align:right; padding-top:2em; margin-left:-4.5em;"><h3 style="font-family:Verdana, Geneva, sans-serif; color:#fff; font-size:19px;"><?php echo __('Mariposa 3.9.3'); ?></h3>
              </div>
 
            </di0.5
@@ -1269,10 +1280,25 @@ inscripcionAlmacen.query({}).forEach(function(seg){
 <?php 
 			   //Si la sesion esta arriba carga el saludo y el logout
 			   if(isset($_SESSION['Auth']['User'])){?>
-              <div id="controls" style="float:right; text-align: center; width:100%; height:20px; margin-top:-0.5em; height:20px; color:#FFF; font-family:Verdana, Geneva, sans-serif; font-size:14px;  font-weight: lighter; clear:both; background-color:#956996; padding-right:5px; border-radius:5px; padding-bottom:8px;">
-              <div style="float:left"><a class="mainLinks" href="javascript:llamamodulo('/v15/renders/usuarios.php');"onclick="change3(this)"style="text-decoration:none; font-weight:bold; margin-bottom:17px;color:#FFFFFF; border-right:1px solid grey; padding:2px 6px 1px 2px"><img src="/v15/mariposa/img/arrowup.png" border="0" width="20px" style="margin-top:-4px;"/>&nbsp;&nbsp;Ventas</a>&nbsp;&nbsp;<a class="mainLinks" href="javascript:llamamodulo('/v15/renders/seguimientos.php');"onclick="change2(this)"style="text-decoration:none; font-weight:bold; margin-bottom:17px; border-right:1px solid grey; padding:2px 6px 1px 2px;"><img src="/v15/mariposa/img/seguimientos.png" border="0" width="18px" style="margin-top:-4px;"/>&nbsp;&nbsp;Seguimientos</a>&nbsp;&nbsp;<a class="mainLinks" href="javascript:llamamodulo('/v15/renders/inscripcion.php');" onclick="change(this)"style="text-decoration:none; font-weight:bold; margin-bottom:17px; border-right:1px solid grey; padding:2px 6px 1px 2px;"><img src="/v15/mariposa/img/inscripciones.png" border="0" width="20px" style="margin-top:-4px;"/>&nbsp;&nbsp;Inscripciones</a>
+
+
+				
+
+
+
+
+
+              <div id="controls" style="float:right; text-align: center; width:100%; height:20px; margin-top:-0.5em; height:30px; color:#FFF; font-family:Verdana, Geneva, sans-serif; font-size:14px;  font-weight: lighter; clear:both; background-color:#956996; padding-right:5px; border-radius:5px; padding-bottom:8px;">
+              <div style="float:left"><a class="mainLinks" href="javascript:llamamodulo('/v15/renders/usuarios.php');"onclick="change3(this)"style="text-decoration:none; font-weight:bold; margin-bottom:10px;color:#FFFFFF; border-right:1px solid grey; padding:2px 6px 1px 2px"><img src="/v15/mariposa/img/arrowup.png" border="0" width="20px" style="margin-top:-4px;"/>&nbsp;&nbsp;Ventas</a>&nbsp;&nbsp;<a class="mainLinks" href="javascript:llamamodulo('/v15/renders/seguimientos.php');"onclick="change2(this)"style="text-decoration:none; font-weight:bold; margin-bottom:10px; border-right:1px solid grey; padding:2px 6px 1px 2px;"><img src="/v15/mariposa/img/seguimientos.png" border="0" width="18px" style="margin-top:-4px;"/>&nbsp;&nbsp;Seguimientos</a>&nbsp;&nbsp;<a class="mainLinks" href="javascript:llamamodulo('/v15/renders/inscripcion.php');" onclick="change(this)"style="text-decoration:none; font-weight:bold; margin-bottom:10px; border-right:1px solid grey; padding:2px 6px 1px 2px;"><img src="/v15/mariposa/img/inscripciones.png" border="0" width="20px" style="margin-top:-4px;"/>&nbsp;&nbsp;Inscripciones</a>
              </div><div style="float:right">
-                   <img src="/v15/mariposa/img/user.png" border="0" style="margin-top:-2px;"/><?php echo $_SESSION['Auth']['User']['nombre'];?> | <a onclick="javascript:window.location = '/v15/renders/Salir.php'" href="#" target="_self" style="color:#FFF; text-decoration:none; font-weight:lighter">Cerrar Sesión</a>
+		           <div id="authorize-div" style="display: none">
+				      <span>Por favor autorizar acceso a Google.</span>
+				      <!--Button for the user to click to initiate auth sequence -->
+				      <button id="authorize-button" class="btn btn-default" onclick="handleAuthClick(event)">
+						 Autorizar <img src="https://cdn3.iconfinder.com/data/icons/complete-set-icons/512/google512x512.png">
+				      </button>
+				</div>
+                   <img src="/v15/mariposa/img/user.png" border="0" style=""/><?php echo $_SESSION['Auth']['User']['nombre'];?> | <a onclick="javascript:window.location = '/v15/renders/Salir.php'" href="#" target="_self" style="color:#FFF; text-decoration:none; font-weight:lighter">Cerrar Sesión</a>
                
  			</div></div> 
 

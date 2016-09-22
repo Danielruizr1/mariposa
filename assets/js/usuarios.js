@@ -90,7 +90,9 @@ dojo.ready(function() {
    titleFontColor: "purple",
    labels: [{value: 1, text: "Janneth"},
         {value: 2, text: "Cesar"}, {value: 3, text: "Yolanda"}, {value: 4, text: "Adelaida"},
-        {value: 5, text: "Daniela"}, ]
+        {value: 5, text: "Daniela"}, ],
+
+    labelStyle: "inside"
 });
     chart.addAxis("y", { title: 'Topes', vertical: true, includeZero: true });
     // Add the series of data

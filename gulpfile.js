@@ -11,12 +11,23 @@ var files = ['assets/templates/Seguimiento.php','assets/templates/agregar_Seguim
     'assets/templates/buscar_inscripcion.php', 'assets/templates/inscripcion.php',
     'assets/templates/seguimientos.php', 'assets/templates/usuarios.php' ];
 
+
+gulp.task('watch', ['templates'], function(){
+
+  livereload.listen();
+
+  gulp.watch(['assets/templates/**/*.php', 'assets/js/**/*.js', 'assets/css/**/*.css'], ['templates']);
+
+});
+
 gulp.task('templates', function (){
 
   files.forEach(function(file){
     userminPHP(file);
 
   });
+
+  livereload();
   
 
 });

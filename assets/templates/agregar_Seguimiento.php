@@ -13,6 +13,8 @@
     <!-- build:css css/main.css -->
        <link rel="stylesheet" href="../css/agregar_seguimiento.css">
     <!-- endbuild -->
+
+
     
    </head>
      <body ng-controller="AlertController as alert">
@@ -31,11 +33,50 @@
                 <h4 class="modal-title"><img src="/v15/mariposa/img/cake.icon.png"> Felicitaciones!</h4>
             </div>
             <div class="modal-body">
+
         
             </div>
           </div>
         </div>
     </div>
+
+
+    <div id="calendarioModal" class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+      <div class="modal-dialog modal-sm">
+          <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3>Calendario</h3>
+        
+            </div>
+            <div class="modal-body">
+                <div class="col-sm-12">
+                  <label>
+                    Inicio del evento
+                    <input type="datetime-local" id="eventStart">
+                  </label>
+                </div>
+                <div class="col-sm-12">
+                <label>
+                    Final del evento
+                  <input type="datetime-local" id="eventEnd">
+                </label>
+                </div>
+        
+            </div>
+            <div class="modal-footer">
+              <div class="col-sm-5 col-sm-offset-3">
+                <button class="btn btn-default" id="guardaCalendario">Agregar</button>
+              </div>        
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+
+
+
 
      <div class="loader"></div>
      <div  class="container-fluid form-container">
@@ -272,7 +313,7 @@
                 <div class="col-sm-4">
                    <div class="form-group">
                         <label for="time" id="titulo">Colegio:  (<font color="#FF0000">*</font>)</label><br/>
-                        <input class="form-control check requiredd" name="data[Seguimiento][colegio]" id="colegio">
+                        <input class="form-control check requiredd" name="data[Seguimiento][colegio]" id="colegio" ng-model="find.colegio" ng-change="changeSearch(find.colegio, 'colegio')">
                    </div>
                 </div>
           </div>
@@ -292,7 +333,7 @@
                 <div class="col-sm-4">
                    <div class="form-group">
                         <label for="mail_quinceanera" id="titulo">E-mail Quinceañera: (<font color="#FF0000">*</font>)</label><img src="imgs/mail.gif" border="0" data-id="mail_quinceanera" class="mailClick" onMouseOver="document.body.style.cursor='pointer';" onMouseOut="document.body.style.cursor='pointer';"/><br/>
-                        <input class="form-control check email14 requiredd" type="email" data-nombre="Email quinceañera:" name="mail_quinceanera" id="mail_quinceanera">
+                        <input class="form-control check email14 requiredd" type="email" data-nombre="Email quinceañera:" name="mail_quinceanera" id="mail_quinceanera" ng-change="changeSearch(find.mail_quinceanera, 'mail_quinceanera')" ng-model="find.mail_quinceanera">
                    </div>
                 </div>
              </div>
@@ -343,25 +384,25 @@
              <div class="col-sm-3">
                    <div class="form-group">
                         <label for="nombrepadre" id="titulo">Nombre del Padre:</label><br/>
-                        <input class="form-control check nombre1" data-nombre="Nombre del padre:" name="data[Seguimiento][nombre_padre]" id="nombre_padre">
+                        <input class="form-control check nombre1" data-nombre="Nombre del padre:" name="data[Seguimiento][nombre_padre]" id="nombre_padre" ng-change="changeSearch(find.nombre_padre, 'nombre_padre')" ng-model="find.nombre_padre">
                    </div>
                 </div>
                 <div class="col-sm-3">
                    <div class="form-group">
                         <label for="mail_padre" id="titulo">E-mail del Padre:</label><img src="imgs/mail.gif" class="mailClick" border="0" data-id="mail_padre"  onMouseOver="document.body.style.cursor='pointer';" onMouseOut="document.body.style.cursor='pointer';"/><br/>
-                        <input class="form-control check email1" type="email" data-nombre="Email del Padre:" type="text" name="data[Seguimiento][mail_padre]" id="mail_padre">
+                        <input class="form-control check email1" type="email" data-nombre="Email del Padre:" type="text" name="data[Seguimiento][mail_padre]" id="mail_padre" ng-change="changeSearch(find.mail_padre, 'mail_padre')" ng-model="find.mail_padre">
                    </div>
                 </div>
                 <div class="col-sm-3">
                    <div class="form-group">
                         <label for="telefonooficina_padre" id="titulo">Tel. Oficina Padre:</label><br/>
-                        <input class="form-control check" data-nombre="Tel del padre:" name="data[Seguimiento][telefonooficina_padre]" id="telefonooficina_padre">
+                        <input class="form-control check" data-nombre="Tel del padre:" name="data[Seguimiento][telefonooficina_padre]" id="telefonooficina_padre" ng-change="changeSearch(find.telefonooficina_padre, 'telefonooficina_padre')" ng-model="find.telefonooficina_padre">
                    </div>
                 </div>
                 <div class="col-sm-3">
                    <div class="form-group">
                         <label for="celular_padre" id="titulo">Celular Padre:</label><br/>
-                        <input class="form-control check celular1" data-nombre="Celular del padre:" name="data[Seguimiento][celular_padre]" id="celular_padre">
+                        <input class="form-control check celular1" data-nombre="Celular del padre:" name="data[Seguimiento][celular_padre]" id="celular_padre" ng-change="changeSearch(find.celular_padre, 'celular_padre')" ng-model="find.celular_padre">
                    </div>
                 </div>
              </div>
@@ -369,25 +410,25 @@
                 <div class="col-sm-3">
                    <div class="form-group">
                         <label for="nombremadre" id="titulo">Nombre de la Madre:</label><br/>
-                        <input class="form-control check nombre2" data-nombre="Nombre de la madre:" name="data[Seguimiento][nombre_madre]" id="nombre_madre">
+                        <input class="form-control check nombre2" data-nombre="Nombre de la madre:" name="data[Seguimiento][nombre_madre]" id="nombre_madre" ng-change="changeSearch(find.nombre_madre, 'nombre_madre')" ng-model="find.nombre_madre">
                    </div>
                 </div>
                 <div class="col-sm-3">
                    <div class="form-group">
                         <label for="mail_madre" id="titulo">E-mail de la Madre:</label><img src="imgs/mail.gif" class="mailClick" border="0" data-id="mail_padre" onMouseOver="document.body.style.cursor='pointer';" onMouseOut="document.body.style.cursor='pointer';"/><br/>
-                        <input class="form-control check email2" type="email" data-nombre="Email de la madre:" type="text" name="data[Seguimiento][mail_madre]" id="mail_madre">
+                        <input class="form-control check email2" type="email" data-nombre="Email de la madre:" type="text" name="data[Seguimiento][mail_madre]" id="mail_madre" ng-change="changeSearch(find.mail_madre, 'mail_madre')" ng-model="find.mail_madre">
                    </div>
                 </div>
                 <div class="col-sm-3">
                    <div class="form-group">
                         <label for="telefonooficina_madre" id="titulo">Tel. Oficina Madre:</label><br/>
-                        <input class="form-control check" data-nombre="Tel de la madre:" name="data[Seguimiento][telefonooficina_madre]" id="telefonooficina_madre">
+                        <input class="form-control check" data-nombre="Tel de la madre:" name="data[Seguimiento][telefonooficina_madre]" id="telefonooficina_madre" ng-change="changeSearch(find.telefonooficina_madre, 'telefonooficina_madre')" ng-model="find.telefonooficina_madre">
                    </div>
                 </div>
                 <div class="col-sm-3">
                    <div class="form-group">
                         <label for="celular_madre" id="titulo"> Celular Madre:</label><br/>
-                        <input class="form-control check celular2" data-nombre="Celular de la madre:" name="data[Seguimiento][celular_madre]" id="celular_madre">
+                        <input class="form-control check celular2" data-nombre="Celular de la madre:" name="data[Seguimiento][celular_madre]" id="celular_madre" ng-change="changeSearch(find.celular_madre, 'celular_madre')" ng-model="find.celular_madre">
                    </div>
                 </div>
              </div>
@@ -485,6 +526,9 @@
                    </div>
                </div>
                <div class="row bitacora-write">
+                <div class="col-sm-12">
+                         <button class="btn  btn-default" id="showCalendario"><i class="glyphicon glyphicon-calendar"></i> Guardar & Agregar a Calendario</button>
+                    </div>
                     <textarea class="form-control textarea noSet" id="bitacora" placeholder="Escribir.."></textarea>
                     <div class="col-sm-6">
                          <button class="btn  btn-default" id="llamadaEfectiva"><i id="callIcon" class="glyphicon glyphicon-earphone"></i> Llamada</button>
@@ -492,6 +536,7 @@
                     <div class="col-sm-6">
                          <button class="btn  btn-default" id="guardarBita"><i class="glyphicon glyphicon-floppy-disk"></i> Guardar</button>
                     </div>
+                   
                </div>
                <div class="row bitacora-list" id="list">
                
@@ -514,9 +559,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+
      <!-- build:js js/final/vendor.js -->
+
       <script src="../js/Seguimiento.js" charset="utf-8"></script>
       <script src="../js/agregar_Seguimientos.js" charset="utf-8"></script>  
-    <!-- endbuild -->         
+    <!-- endbuild -->  
+
+    <script src="https://apis.google.com/js/client.js?onload=loadedSeg"></script>
+
 	</body>	 
 </html>

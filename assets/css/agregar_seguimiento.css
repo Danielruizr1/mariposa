@@ -103,6 +103,9 @@
 	border-bottom:1px solid #CFAFF5;
 }
 
+.btn {
+	border-radius: 0px;
+}
 .header-row .btn-info {
 	border-radius: 0;
 	width: 100%;

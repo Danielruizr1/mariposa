@@ -1,3 +1,30 @@
+  var CLIENT_ID = '976358932263-7jupd6ts34s6c1rovb11n03oq9r919pt.apps.googleusercontent.com';
+
+      var SCOPES = ['https://www.googleapis.com/auth/calendar','https://www.googleapis.com/auth/gmail.send'];
+
+  function loadedSeg (){
+  	gapi.auth.authorize(
+          {
+            'client_id': CLIENT_ID,
+            'scope': SCOPES.join(' '),
+            'immediate': true
+          }, done);
+  	 
+
+
+  }
+
+  function done ( ){
+  	gapi.client.load('calendar', 'v3', function(){
+  		console.log('loaded calendar');
+  	});
+
+  	 gapi.client.load('gmail', 'v1', function(){
+  	 	console.log('loaded gmail');
+
+  	 });
+  }
+
   var Seguimiento = function(id){
 	   var seg = Object.create(Seguimiento.prototype);
 	   seg.llamadaEfectiva = "0";
@@ -37,6 +64,28 @@
 	  
 	 }	
 
+
+ Seguimiento.prototype.sendMessage = function() {
+
+  var email = '';
+
+  email += "To: Danielruiz@ruizoft.com"+"\r\n"+"Subject: SEGUIMIENTO CREADO"+"\r\n";
+
+  email += "\r\n" + "HOLA SEGUIDOR";
+  console.log(email);
+  var base64EncodedEmail = btoa(email).replace(/\+/g, '-').replace(/\//g, '_');
+  console.log(base64EncodedEmail);
+  var request = gapi.client.gmail.users.messages.send({
+    'userId': 'me',
+    'resource': {
+      'raw': base64EncodedEmail
+    }
+  });
+  request.execute(function(){
+  	console.log('message sent');
+  });
+}
+
 Seguimiento.prototype.alertBitacora = function() {
 	$('.warning').addClass("show");
 
@@ -63,6 +112,7 @@ Seguimiento.prototype.required = function() {
 }
 Seguimiento.prototype.saveValues = function(){
 	   var required = this.required();
+	   var controller = this;
 	   if(required){
 	   var urls = {};
 	   urls.seg = "/v15/mariposa/seguimientos/recibeajax";
@@ -79,6 +129,9 @@ Seguimiento.prototype.saveValues = function(){
 		 	this.saveBitacora();
 		 }
 		$("#Enviar").attr("disabled", "disabled");
+		controller.sendMessage();
+
+
 		$.ajax({
 			method: "POST",
 			url: urls[this.url],
@@ -98,25 +151,26 @@ Seguimiento.prototype.saveValues = function(){
 			 	document.getElementById('est').innerHTML=' No.'+ result;
 			 	this.saveBitacora();
 			 	$("#Enviar").attr("disabled", false);
-			 } else if(result == -1) {
-			 $( ".modal-body" ).append('<p>El seguimiento se ha ingresado con éxito</p>');
-             $('#confirmModal').modal('show');
-			 window.parent.seguimientoAlmacen.put(this.data);
-	         window.parent.seguimiento=window.parent.seguimientoAlmacen.data;
-	         $("#Enviar").attr("disabled", false);
-	     }
-	     if(result == -2){
-	     	if(this.type == "Seg"){
-	     		this.createSpecial();
-	     		this.setPagosAyuda();
-	     		this.type = "Ins";
-	     	} 
-	     	$( ".modal-body" ).append('<p>La inscripción se ha ingresado con éxito</p>');
-             $('#confirmModal').modal('show');
-	     	window.parent.inscripcionAlmacen.put(this.data);			
-	        window.parent.inscripcion=window.parent.inscripcionAlmacen.data;
-	        $("#Enviar").attr("disabled", false);
-	     }
+			 }
+			 if(result == -1) {
+				 $( ".modal-body" ).append('<p>El seguimiento se ha ingresado con éxito</p>');
+	             $('#confirmModal').modal('show');
+				 window.parent.seguimientoAlmacen.put(this.data);
+		         window.parent.seguimiento=window.parent.seguimientoAlmacen.data;
+		         $("#Enviar").attr("disabled", false);
+		     }
+		     if(result == -2){
+		     	if(this.type == "Seg"){
+		     		this.createSpecial();
+		     		this.setPagosAyuda();
+		     		this.type = "Ins";
+		     	} 
+		     	$( ".modal-body" ).append('<p>La inscripción se ha ingresado con éxito</p>');
+	             $('#confirmModal').modal('show');
+		     	window.parent.inscripcionAlmacen.put(this.data);			
+		        window.parent.inscripcion=window.parent.inscripcionAlmacen.data;
+		        $("#Enviar").attr("disabled", false);
+		     }
 
 		})
 	 }			  	 
@@ -141,7 +195,7 @@ Seguimiento.prototype.setValues = function(){
 		 	this.setAmigas();
 		 	this.setFields();
 		 }
-	}
+}
 Seguimiento.prototype.setBitacora = function() {
 	var bitacoras = this.bitacora;
 	var length = 0;
@@ -225,6 +279,59 @@ Seguimiento.prototype.saveBitacora = function() {
     
     $("#bitacora").val('');
  }
+}
+
+Seguimiento.prototype.saveCalendar = function() {
+	var controller = this;
+	var contenido=document.getElementById('bitacora').value;
+	var eventStart = new Date(document.getElementById('eventStart').value).toISOString();
+	
+	var eventStart = eventStart.replace(".000Z", "");
+	console.log(eventStart);
+	var eventEnd = new Date(document.getElementById('eventEnd').value).toISOString();
+	
+	var eventEnd = eventEnd.replace(".000Z", "");
+	console.log(eventEnd);
+	var dateNow = new Date();
+
+
+	var event = {
+		  'summary': 'Seguimiento '+controller.data.id+' Fecha: '+dateNow,
+		  'description': contenido,
+		  'location': 'Bogota, Colombia',
+		  'start': {
+		    'dateTime': eventStart,
+		    'timeZone': 'America/Bogota'
+		  },
+		  'end': {
+		    'dateTime': eventEnd,
+		    'timeZone': 'America/Bogota'
+		  },
+		  'attendees': [],
+		  'reminders': {
+		    'useDefault': false,
+		    'overrides': [
+		      {'method': 'email', 'minutes': 24 * 60},
+		      {'method': 'popup', 'minutes': 10}
+		    ]
+		  }
+	};
+
+	var request = gapi.client.calendar.events.insert({
+  'calendarId': 'primary',
+  'resource': event
+});
+
+request.execute(function(event) {
+	console.log(event.htmlLink)
+	if(event.htmlLink && event.htmlLink != undefined ){
+		$('#calendarioModal').modal('hide');
+		controller.saveBitacora();
+
+	};
+});
+	
+    
 }
 
 Seguimiento.prototype.getDate = function(p) {
@@ -323,9 +430,18 @@ Seguimiento.prototype.setListeners = function() {
 		     e.preventDefault();
 			 elSeguimiento.saveValues();
 		   });
+	  
 	   $("#guardarBita").click(function(e){
 	   	    e.preventDefault();
 	   	    elSeguimiento.saveBitacora();
+	   })
+	   $("#guardaCalendario").click(function(e){
+	   	    e.preventDefault();
+	   	    elSeguimiento.saveCalendar();
+	   })
+	    $("#showCalendario").click(function(e){
+	   	    e.preventDefault();
+	   	    $('#calendarioModal').modal('show');
 	   })
 	   $("#llamadaEfectiva").click(function(e){
 	   	    e.preventDefault();
@@ -344,7 +460,7 @@ Seguimiento.prototype.setListeners = function() {
                     elSeguimiento.type="change";
                     elSeguimiento.newBita= "El nombre de la quinceañera ha cambiado de "+elSeguimiento.data[this.id]+" a "+elSeguimiento.data2[this.id];
                 }
-                if(this.id == "estado" && elSeguimiento.data2[this.id] != elSeguimiento.data[this.id]){
+                if(this.id == "estado" && elSeguimiento.type != 'Ins' && elSeguimiento.data2[this.id] != elSeguimiento.data[this.id]){
                     elSeguimiento.type="change";
                     var estado = {1:'Pendiente', 2: 'Inscrita', 3: 'No Inscrita'};
                     elSeguimiento.newBita= "El estado ha cambiado de "+estado[elSeguimiento.data[this.id]]+" a "+estado[elSeguimiento.data2[this.id]];

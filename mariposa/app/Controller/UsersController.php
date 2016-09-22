@@ -120,6 +120,8 @@ class UsersController extends AppController {
  *Metodos de lgin y logout de la aplicacion
 */
 public function admin() {
+	$destinos = $this->User->query('SELECT * FROM destinos');
+	$this->set('destinos', $destinos);
 
 }
 

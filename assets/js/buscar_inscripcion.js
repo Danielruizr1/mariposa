@@ -336,8 +336,8 @@ grid = new dojox.grid.EnhancedGrid({
 					store:BusquedaStore,
 					style: "height:280px",
 					structure: [
-					    {name:"Interes", field:"Color", formatter: poneFont2, width:"3.5em"},
 					    {name:"#", field:"id", width:"10%", width:"2.5em"},
+					     {name:"ESTADO DE VIAJE", field:"estado", width:"15em", formatter: poneFont},
 					    {name:"QUINCEA&Ntilde;ERA", field:"nombrequinceanera", width:"15em", formatter: poneFont},
 						{name:"VENDEDOR", field:"nombreAgente", width:"15em", formatter: poneFont},
 						{name:"CIUDAD", field:"nombreciudad", width:"7.5em", formatter: poneFont},

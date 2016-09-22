@@ -23,7 +23,7 @@ delete this.angles;
 }
 return;
 }
-if(!o.shape||o.type!=="onmouseover"){
+if(true){
 return;
 }
 var _f={type:"rect"},_10=["after","before"];
