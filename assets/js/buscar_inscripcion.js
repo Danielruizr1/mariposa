@@ -1,3 +1,79 @@
+angular.module('search', [])
+	.controller('searchController', function($scope){
+		var controller = this;
+
+		this.estado = 1;
+
+		this.inscripciones = window.parent.inscripcion;
+		this.bitacoras = window.parent.bitacora2;
+
+		this.filtered;
+		controller.filteredBitas = [];
+
+		this.searchBitacora = function(){
+			controller.filteredBitas = controller.bitacoras.filter(controller.bitaFilter);
+
+			
+
+		};
+
+		this.new = function(){
+			controller.find = '';
+			controller.filtered = [];
+			removeGrid();
+
+
+		};
+
+		this.buscar = function(){
+			controller.filteredBitas.forEach(function(elem, index, arr){
+				arr[index]  = elem.idseguimiento;
+
+			});
+			controller.filtered = controller.inscripciones.filter(controller.segFilter);
+			cargagrilla({0:controller.filtered});
+
+		};
+
+		this.segFilter = function(value){
+			if(controller.filteredBitas.length == 0) return false;
+
+        	return controller.filteredBitas.includes(value.id);
+        	
+
+		};
+		this.bitaFilter = function(value){
+			if(!controller.find) return false;
+
+        	if (typeof value.ingreso === 'string') return value.ingreso.toLowerCase().includes(controller.find.toLowerCase());
+
+        	return value.ingreso == controller.search;
+
+		};
+
+
+	
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*-------------Inicializa el objeto filereader y el grid-------*/
 //Libreria que maneja las funciones del Datagrid
 dojo.require("dojox.grid.EnhancedGrid");

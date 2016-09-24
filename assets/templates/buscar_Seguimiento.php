@@ -178,7 +178,7 @@
 
             <div id="fila4" style="width:95%; font-family:Verdana, Geneva, sans-serif; font-size:14px; margin-bottom:5px; margin-left:1em; float:left;">
             <div style="float:right;padding-right:0.5em; text-align:right">
-            <button id="removeBtn" data-dojo-type="dijit.form.Button" onClick="removeGrid();">
+            <button type="button"  ng-click="controller.new()" >
                     Nueva Busqueda
         </button>
 

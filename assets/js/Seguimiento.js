@@ -65,25 +65,41 @@
 	 }	
 
 
- Seguimiento.prototype.sendMessage = function() {
+ Seguimiento.prototype.sendMessage = function(mail) {
 
   var email = '';
 
-  email += "To: Danielruiz@ruizoft.com"+"\r\n"+"Subject: SEGUIMIENTO CREADO"+"\r\n";
+  email += "To: "+mail+"\r\n"+"Subject: Rocio de Castiblanco Viajesde15.com Informacion de Nuestros Destinos"+"\r\n"+"Content-Type: text/html; charset=utf-8"+"\r\n";
 
-  email += "\r\n" + "HOLA SEGUIDOR";
+  
+	$.ajax({
+	     method: "POST",
+		 url: "/v15/mariposa/seguimientos/reenviarcorreo",
+		 data: {user:this.data.agente, destinoquin: this.data.destino, email: mail, id:this.data.id, nombre: this.data.nombrequienllama},
+			 success: function(result) {
+				email += "\r\n" + result;
+				var base64EncodedEmail = btoa(unescape(encodeURIComponent(email))).replace(/\+/g, '-').replace(/\//g, '_');
+				  var request = gapi.client.gmail.users.messages.send({
+				    'userId': 'me',
+				    'resource': {
+				      'raw': base64EncodedEmail
+				    }
+				  });
+				  request.execute(function(){
+				  	console.log('message sent');
+				  });
+		 	 
+	 },	 
+	},this);
+
+
+
+
+
+
+  /*
   console.log(email);
-  var base64EncodedEmail = btoa(email).replace(/\+/g, '-').replace(/\//g, '_');
-  console.log(base64EncodedEmail);
-  var request = gapi.client.gmail.users.messages.send({
-    'userId': 'me',
-    'resource': {
-      'raw': base64EncodedEmail
-    }
-  });
-  request.execute(function(){
-  	console.log('message sent');
-  });
+  */
 }
 
 Seguimiento.prototype.alertBitacora = function() {
@@ -119,18 +135,20 @@ Seguimiento.prototype.saveValues = function(){
 	   urls.insc = "/v15/mariposa/inscripcions/recibeajax";
 	   var type = this.type;
 	   for(key in this.data2){
-				  this.data[key] = this.data2[key];
-				  }
-	         if(type == "new") {
-	           this.newBita = "Nuevo Seguimiento Creado por "+this.data.nombreAgente+", De la quinceañera "+this.data.nombrequinceanera;
-	        
+			this.data[key] = this.data2[key];
+		}
+
+	     if(type == "new") {
+	     	controller.sendMessage(this.data.email);
+
+	       this.newBita = "Nuevo Seguimiento Creado por "+this.data.nombreAgente+", De la quinceañera "+this.data.nombrequinceanera;
+	    
 		 } 
 		 if(type == "change"){
 		 	this.saveBitacora();
 		 }
 		$("#Enviar").attr("disabled", "disabled");
-		controller.sendMessage();
-
+		
 
 		$.ajax({
 			method: "POST",
@@ -311,8 +329,8 @@ Seguimiento.prototype.saveCalendar = function() {
 		  'reminders': {
 		    'useDefault': false,
 		    'overrides': [
-		      {'method': 'email', 'minutes': 24 * 60},
-		      {'method': 'popup', 'minutes': 10}
+		      {'method': 'email', 'minutes': 2 * 60},
+		      {'method': 'popup', 'minutes': 30}
 		    ]
 		  }
 	};
@@ -424,7 +442,8 @@ Seguimiento.prototype.setListeners = function() {
       $(".mailClick").on("click", function(e){
       	e.preventDefault();
       	var mail = $(this).data('id');
-      	elSeguimiento.sendMail(mail);
+      	var email = elSeguimiento.data2[mail] || elSeguimiento.data[mail];
+      	elSeguimiento.sendMessage(email);
       })
 	  $("#Enviar").click(function(e){
 		     e.preventDefault();
@@ -464,6 +483,23 @@ Seguimiento.prototype.setListeners = function() {
                     elSeguimiento.type="change";
                     var estado = {1:'Pendiente', 2: 'Inscrita', 3: 'No Inscrita'};
                     elSeguimiento.newBita= "El estado ha cambiado de "+estado[elSeguimiento.data[this.id]]+" a "+estado[elSeguimiento.data2[this.id]];
+                }
+                if(this.id == "estado" && elSeguimiento.type == 'Ins' && elSeguimiento.data2[this.id] != elSeguimiento.data[this.id]){
+                    elSeguimiento.type="change";
+                    var estado = {1:'Viaje confirmado', 2: 'Cambio de destino', 
+                    3: 'Cambio de fecha de viaje', 3: 'Cambio de fecha de viaje con cambio de destino',
+	                3: 'Cancelación de viaje',};
+                    elSeguimiento.newBita= "El estado ha cambiado de "+estado[elSeguimiento.data[this.id]]+" a "+estado[elSeguimiento.data2[this.id]];
+                }
+                if(this.id == "fase" && elSeguimiento.type != 'Ins' && elSeguimiento.data2[this.id] != elSeguimiento.data[this.id]){
+                    elSeguimiento.type="change";
+                    var fase = {1:'Inicio', 2: 'Volver a llamar', 3: 'Posponen viaje',
+                    4:'Envié datos para cosignar y documentos de inscripción',
+                    5: 'Visité a cliente', 6: 'Concreté cita en la oficina',
+                    7:'Les atendí en la oficina', 8: 'Dejé mensaje telefónico', 
+                    9: 'Envié revista', 10: 'Fin'
+                };
+                    elSeguimiento.newBita= "La fase ha cambiado de "+fase[elSeguimiento.data[this.id]]+" a "+fase[elSeguimiento.data2[this.id]];
                 }
             }
             var list = $(this).data("list");

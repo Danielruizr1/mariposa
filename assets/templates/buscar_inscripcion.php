@@ -19,6 +19,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.7.1/dojo/dojo.js" data-dojo-config="isDebug: true, parseOnLoad: true"></script>
      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
 
     <!-- Llamada al archivo js externo que controla las funciones de la página principal -->
     
@@ -75,7 +76,7 @@
     <!-- endbuild -->
    </head>
    <!-- set the claro class on our body element -->
-  <body class="claro" >
+  <body class="claro" ng-app="search" ng-controller="searchController as controller" >
      <div style="width:100%; height:100%; background:#FFF; overflow:auto">
      <center>
       <!--Div que encuadra todos los objetos-->
@@ -122,7 +123,7 @@
           <input id="destinoInput"/>
         </div>
            <div style="float:left;padding-left:0.5em; text-align:left">
-          <label for="time" id="titulo" style="text-align:left">Documento Aprovado:</label><br/>
+          <label for="time" id="titulo" style="text-align:left">Documento Aprobado:</label><br/>
           <input class="claro"  id="AgenciaAgencia" />
         </div>
         <div style="float:left;padding-left:0.5em;text-align:left">
@@ -141,10 +142,22 @@
 
         </div><!---Cierra fila---->
 
+
+
+        <div class="row">
+              <div class="col-sm-6">
+                <label>
+                  Buscar en la bitacora..
+                  </label>
+                  <textarea ng-model="controller.find"  class="form-control" ng-change="controller.searchBitacora()" rows="2"></textarea>
+                  
+                
+              </div>
+            </div>
+
         <div id="fila4" style="width:95%; font-family:Verdana, Geneva, sans-serif; font-size:14px; margin-bottom:5px; margin-left:1em; float:left;">
         <div style="float:right;padding-right:0.5em; text-align:right">
-        <button id="removeBtn" data-dojo-type="dijit.form.Button" onClick="removeGrid();"
-            >
+        <button type="button" ng-click="controller.new()" >
                 Nueva Busqueda
     </button>
 
@@ -160,6 +173,9 @@
         <div style="float: right;padding-right:0.5em; text-align:right">
            <button data-dojo-type="dijit.form.Button" type="button" name="searchButton" value="Buscar" onClick="buscar();">Buscar</button>
         </div>
+        <div style="float: right;padding-right:0.5em; text-align:right">
+               <button type="button" name="searchButton" value="Buscar" ng-click="controller.buscar()">Buscar Por Bitacora</button>
+            </div>  
                 <div style="float: right;padding-right:0.5em; text-align:right">
 
 <div class="dropdown" id="adminDrop">

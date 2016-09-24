@@ -20,6 +20,7 @@ angular.module('search', [])
 		this.new = function(){
 			controller.find = '';
 			controller.filtered = [];
+			removeGrid();
 
 		};
 
@@ -50,41 +51,7 @@ angular.module('search', [])
 		};
 
 
-		this.structure = [
-					    {name:"Interes", field:"Color", width:"3.5em"},
-					    {name:"#", field:"id", width:"10%", width:"2.5em"},
-					    {name:"QUINCEAÑERA", field:"nombrequinceanera", width:"15em" },
-						{name:"VENDEDOR", field:"nombreAgente", width:"15em"},
-						{name:"CIUDAD", field:"nombreciudad", width:"7.5em" },
-						{name:"MEDIO", field:"agenciaNombre", width:"15em" },
-						{name:"NOMBRE DEL PADRE", field:"nombre_padre", width:"15em" },
-						{name:"CORREO PADRE", field:"mail_padre", width:"15em" },
-						{name:"OFICINA PADRE", field:"telefonooficina_padre", width:"5.5em" },
-						{name:"CEL PADRE", field:"celular_padre", width:"5.5em" },
-						{name:"NOMBRE DE LA MADRE", field:"nombre_madre", width:"15em" },
-						{name:"CORREO MADRE", field:"mail_madre",width:"15em" },
-						{name:"OFICINA MADRE", field:"telefonooficina_madre", width:"7.5em" },
-						{name:"CEL MADRE", field:"celular_madre", width:"7.5em" },
-						{name:"NOMBRE PERSONA QUIEN LLAMO", field:"nombrequienllama",width:"15em" },
-						{name:"TELEFONO", field:"telefono1", width:"7.5em" },
-						{name:"CORREO", field:"email",  width:"15em" },
-						{name:"CORREO QUINCEAÑERA", field:"mail_quinceanera", width:"15em" },
-						{name:"AÑO", field:"anoviaje_quinceanera",  width:"2em" },
-						{name:"MES", field:"mesViajeQuin",  width:"2em" },
-						{name:"DESTINO", field:"nombreDestino", width:"15em" },
-						{name:"TELEFONO", field:"telefono2",width:"5.5em" },
-						{name:"TELEFONO", field:"telefono3", width:"5.5em" },
-						{name:"CELULAR", field:"celular", width:"5.5em" },
-						{name:"FAX", field:"fax",width:"5.5em" },
-						{name:"DIRECCION", field:"direccion", width:"15em" },
-						{name:"PARENTESCO", field:"nombreParentesco", width:"7.5em" },
-						{name:"TEL QUINCEAÑERA", field:"telefono_quinceanera", width:"7.5em" },
-						{name:"CEL QUINCEAÑERA", field:"celular_quinceanera", width:"7.5em" },
-						{name:"COLEGIO", field:"colegio", width:"7.5em" },
-						{name:"FASE", field:"nombreFase", width: "300px" },
-						{name:"MOTIVO DE NO VIAJE", field:"motivo",width:"15em"},
-						{name:"ULTIMO CONTACTO", field:"ultimo_contacto", width:"7.5em" },
-					];
+	
 
 });
 

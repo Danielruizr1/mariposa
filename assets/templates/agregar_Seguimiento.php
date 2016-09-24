@@ -321,13 +321,13 @@
                 <div class="col-sm-4">
                    <div class="form-group">
                         <label for="telefono_quinceanera" id="titulo">Télefono Fijo:</label><br/>
-                        <input class="form-control check" data-nombre="Telefono Quinceañera:" name="data[Seguimiento][telefono_quinceanera]" id="telefono_quinceanera">
+                        <input ng-change="changeSearch(find.telefono_quinceanera, 'telefono_quinceanera')" ng-model="find.telefono_quinceanera" class="form-control check" data-nombre="Telefono Quinceañera:" name="data[Seguimiento][telefono_quinceanera]" id="telefono_quinceanera">
                    </div>
                 </div>
                 <div class="col-sm-4">
                    <div class="form-group">
                         <label for="celular_quinceanera" id="titulo">Celular:</label><br/>
-                        <input class="form-control check celular14" data-nombre="Celular Quinceañera:" name="data[Seguimiento][celular_quinceanera]" id="celular_quinceanera">
+                        <input ng-change="changeSearch(find.celular_quinceanera, 'celular_quinceanera')" ng-model="find.celular_quinceanera" class="form-control check celular14" data-nombre="Celular Quinceañera:" name="data[Seguimiento][celular_quinceanera]" id="celular_quinceanera">
                    </div>
                 </div>
                 <div class="col-sm-4">

@@ -696,26 +696,11 @@ Respondiendo a su solicitud enviamos esta información al correo proporcionado. 
         $subject = $asunto;
         $html = $codigohtml;  // HTML version of the email
 		$crlf = "\n";
-        $host = "ssl://smtp.gmail.com";
-        $port = "465";
-        $username = $emailusuario;
-        $password = $clavemail;
-        $headers = array ('From' => $from,
-          'To' => $to,
-		  'Return-Path'   => $from,
-          'Subject' => $subject);
-        $smtp = Mail::factory('smtp',
-          array ('host' => $host,
-            'port' => $port,
-            'auth' => true,
-            'username' => $username,
-            'password' => $password));
         $mime = new Mail_mime($crlf);
 		$mime->setHTMLBody($html);
 		$mimeparams['html_charset']="UTF-8"; 
 		$body = $mime->get($mimeparams);
-        $headers = $mime->headers($headers);
-        $mail = $smtp->send($to, $headers, $body);
+        return $html;
 		//@eduardo:Envia el código a traves de la función mail de php
 		//$cabeceras = "Content-type: text/html\r\n";
         //mail($email,$asunto,$codigohtml,$cabeceras);
@@ -775,8 +760,8 @@ Respondiendo a su solicitud enviamos esta información al correo proporcionado. 
 	 $this->request->data['Seguimiento']['email']=$_POST['email'];
 	 $id=$_POST['id'];
 	 $this->request->data['Seguimiento']['nombrequienllama']=$_POST['nombre'];
-	 $this->enviacorreo($id);
-	 echo "Se ha reenviado el correo con exito";
+	 $html = $this->enviacorreo($id);
+	 echo $html;
  }
  
  public function borrarcache() 

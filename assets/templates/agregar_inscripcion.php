@@ -428,7 +428,7 @@
                       </div>
 
                 </div>
-                <div class="row" id="divVisa1">
+                <div class="row">
                 <div class="col-sm-4">
                          <div class="form-group">
                              <label for="date" id="titulo">Fecha Emision:</label>
@@ -1186,6 +1186,7 @@
       <script src="../js/agregar_Inscripcion.js" charset="utf-8"></script>
     <!-- endbuild -->
     
+    <script src="https://apis.google.com/js/client.js?onload=loadedSeg"></script>
 
        
 </html>
