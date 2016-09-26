@@ -330,7 +330,7 @@ Seguimiento.prototype.saveCalendar = function() {
 		    'useDefault': false,
 		    'overrides': [
 		      {'method': 'email', 'minutes': 2 * 60},
-		      {'method': 'popup', 'minutes': 30}
+		      {'method': 'email', 'minutes': 24 * 60}
 		    ]
 		  }
 	};
@@ -487,8 +487,8 @@ Seguimiento.prototype.setListeners = function() {
                 if(this.id == "estado" && elSeguimiento.type == 'Ins' && elSeguimiento.data2[this.id] != elSeguimiento.data[this.id]){
                     elSeguimiento.type="change";
                     var estado = {1:'Viaje confirmado', 2: 'Cambio de destino', 
-                    3: 'Cambio de fecha de viaje', 3: 'Cambio de fecha de viaje con cambio de destino',
-	                3: 'Cancelación de viaje',};
+                    3: 'Cambio de fecha de viaje', 4: 'Cambio de fecha de viaje con cambio de destino',
+	                5: 'Cancelación de viaje',};
                     elSeguimiento.newBita= "El estado ha cambiado de "+estado[elSeguimiento.data[this.id]]+" a "+estado[elSeguimiento.data2[this.id]];
                 }
                 if(this.id == "fase" && elSeguimiento.type != 'Ins' && elSeguimiento.data2[this.id] != elSeguimiento.data[this.id]){
