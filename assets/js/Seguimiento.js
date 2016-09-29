@@ -266,7 +266,9 @@ Seguimiento.prototype.saveBitacora = function() {
 	}
 	if (contenido){
     var date = this.getDate(1);
-    var bitacora = {idseguimiento:this.data.id, nombreUsuario:window.parent.nombreuseract,usuario:window.parent.idusuarioactivo, ingreso:decodeURIComponent(contenido), llamadaEfectiva:this.llamadaEfectiva, fecha:date.fecha, hora:date.hora}
+    var bitacora = {idseguimiento:this.data.id, nombreUsuario:window.parent.nombreuseract,
+    	usuario:window.parent.idusuarioactivo, ingreso:decodeURIComponent(contenido.toUpperCase()), 
+    	llamadaEfectiva:this.llamadaEfectiva, fecha:date.fecha, hora:date.hora}
     $.ajax({
 		  method: "POST",
 		  url: urls[this.url],

@@ -391,7 +391,7 @@ function poneFecha(entry, rowIndex){
 						{name:"Destino", field:"iddestino", width:"15em",formatter: poneDestino,  width:"4em"},
 						{name:"Año", field:"anoviaje_quinceanera", width:"3em",formatter: poneSalida},
 						{name:"Mes", field:"mesviaje_quinceanera", width:"2em",formatter: poneMes},						
-						{name:"Quien Inscribio A La Niña", field:"nombrequienllama", width:"15em",formatter:setContacto},
+						{name:"Quien Inscribío a la niña", field:"nombrequienllama", width:"15em",formatter:setContacto},
 						{name:"Vendedor", field:"nombreAgente", width:"15em", formatter:setVendedor, width:"11.5em"},
 						{name:"Asesor", field:"asesorNombre", width:"15em",formatter: setVendedor, width:"11.5em"},
 						{name:"Ciudad", field:"ciudadResidencia", width:"7.5em", formatter:poneCiudad},
@@ -662,7 +662,7 @@ function crearNotificaciones(){
 	   //if(((shoe.tracker!=0)&actualMayorIngreso)|| (shoe.transferencia!=0) || (shoe.vinculacion!=0) || (shoe.bitacora!=0)){  Crea Notificacion para los correos que no han sido abiertos
 	   if((shoe.transferencia!=0) || (shoe.vinculacion!=0) || (shoe.bitacora!=0)){ 
 		   var id=shoe.id;
-		   interna+='<div style="width:95%; background-color:#DDDDDD; border:solid 1px;#888888;position:relative;-moz-border-radius: 5px;border-radius: 5px; font-family:Verdana, Geneva, sans-serif; font-size:12px; margin-bottom:5px;"><div style="width:100%; height:21px;color:#444444; text-align:left" ><div style="float:left; width:49%">Seguimiento:<strong>'+shoe.id+'</strong></div><div style="float:right;width:49%; text-align:right"><img src="imgs/cerrar.png" border="0" onclick="borraNotificacion('+id+');" onMouseOver="document.body.style.cursor = \'pointer\';" onMouseOut="document.body.style.cursor = \'default\';"/></div></div><div style="width:100%; color:#A66BD6;font-size:12px; text-align:left; padding-left:0.5em; ">'+shoe.nombrequinceanera+'</div><div onClick="filtraSeguimiento('+id+');" onMouseOver="document.body.style.cursor = \'pointer\';" onMouseOut="document.body.style.cursor = \'default\';"><div style="width:100%; color:#A66BD6;font-size:12px; text-align:center"><ul style="margin-left:-10px">';
+		   interna+='<div style="width:95%; background-color:#C1D3DD; border:solid 1px;#888888;position:relative;-moz-border-radius: 5px;border-radius: 5px; font-family:Verdana, Geneva, sans-serif; font-size:12px; margin-bottom:5px;"><div style="width:100%; height:21px;color:#444444; text-align:left" ><div style="float:left; width:49%">Seguimiento:<strong>'+shoe.id+'</strong></div><div style="float:right;width:49%; text-align:right"><img src="imgs/cerrar.png" border="0" onclick="borraNotificacion('+id+');" onMouseOver="document.body.style.cursor = \'pointer\';" onMouseOut="document.body.style.cursor = \'default\';"/></div></div><div style="width:100%; color:#A66BD6;font-size:12px; text-align:left; padding-left:0.5em; ">'+shoe.nombrequinceanera+'</div><div onClick="filtraSeguimiento('+id+');" onMouseOver="document.body.style.cursor = \'pointer\';" onMouseOut="document.body.style.cursor = \'default\';"><div style="width:100%; color:#A66BD6;font-size:12px; text-align:center"><ul style="margin-left:-10px">';
 		    /*if(shoe.tracker!=0){
 				if(actualMayorIngreso){
 				 interna+='* Cliente no ha revisado correo.<br/>'+shoe.tracker; 

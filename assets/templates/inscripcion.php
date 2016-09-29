@@ -67,12 +67,16 @@
      <div style="width:100%; height:50px;">
      <table> 
       <tr align="left">
-       <td align="left" class="claro"><input id="destinoSeguimiento" /></td>
-       <td align="left" class="claro"><input id="VendedorVendedor" /></td>
-       <td align="left" class="claro"><input id="AgenciaAgencia" /></td>
-         
-         <td style="color:#444444; font-family:Verdana, Geneva, sans-serif; font-size:16px;" align="left"><label for="agency">Quinceañera:</label></td>
+
+      <td style="color:#444444; font-family:Verdana, Geneva, sans-serif; font-size:16px;" align="left"><label for="agency">Quinceañera:</label></td>
        <td align="left"><input type="text" name="nombrenina" id="nombrenina" onKeyUp="filtragrid();"  value="" style="width:260px;-moz-border-radius: 5px;border-radius: 5px; border: #D7D7D7 solid 1px; font-size:18px;"/></td>
+
+       <td align="left" class="claro"><input id="destinoSeguimiento" /></td>
+       <td align="left" class="claro"><input id="AgenciaAgencia" /></td>
+       <td align="left" class="claro"><input id="VendedorVendedor" /></td>
+       
+         
+         
        <td align="left"><div id="rompeQuery" style="display:none; font-family:Verdana, Geneva, sans-serif; padding-left:1em; font-size:14px">
        <a href="javascript:cargaTodos();">Ver Todos</a>
            </div></td>      
@@ -82,10 +86,7 @@
      </div>
      <div id="gridDiv" style="width:100%;">
      </div>
-     <div style="float:left; text-align:left; margin-right:4em; font-family:Verdana, Geneva, sans-serif; font-size:14px; margin-top:1em; color:#888888; width:40%">
-      
-     </div>
-     <div style="float:right; text-align:right; margin-right:4em; font-family:Verdana, Geneva, sans-serif; font-size:14px; margin-top:1em; color:#888888;width:29%">
+     <div style="float:right; text-align:right; margin-right:4em; font-family:Verdana, Geneva, sans-serif; font-size:14px; color:#888888;width:29%">
       TOTAL:<span id="totalseg" style=" color:#8500B2"></span>
      </div>
     </div><!-----Div contenedor de las busquedas y el grid--------->

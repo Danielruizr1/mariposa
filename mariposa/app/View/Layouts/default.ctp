@@ -1270,7 +1270,7 @@ inscripcionAlmacen.query({}).forEach(function(seg){
             </div> 
            </div>
            <div style="float:right; width:49%;height:70px; margin-top:-15px; margin-right:-200px;">
-             <div style="width:100%; text-align:right; padding-top:2em; margin-left:-4.5em;"><h3 style="font-family:Verdana, Geneva, sans-serif; color:#fff; font-size:19px;"><?php echo __('Mariposa 3.9.3'); ?></h3>
+             <div style="width:100%; text-align:right; padding-top:2em; margin-left:-4.5em;"><h3 style="font-family:Verdana, Geneva, sans-serif; color:#fff; font-size:19px;"><?php echo __('Mariposa 3.9.4'); ?></h3>
              </div>
 
            </di0.5

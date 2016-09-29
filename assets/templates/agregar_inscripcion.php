@@ -301,13 +301,13 @@
                       </div>
                       <div class="col-sm-4">
                          <div class="form-group">
-                              <label for="mail_quinceanera" id="titulo">Email Quinceañera: (<font color="#FF0000">*</font>)</label><img src="imgs/mail.gif" border="0" data-id="mail_quinceanera" class="mailClick" onMouseOver="document.body.style.cursor='pointer';" onMouseOut="document.body.style.cursor='pointer';"/><br/>
+                              <label for="mail_quinceanera" id="titulo">E-mail Quinceañera: (<font color="#FF0000">*</font>)</label><br/>
                               <input class="form-control check email14" type="email" data-nombre="Email quinceañera:" name="mail_quinceanera" id="mail_quinceanera">
                          </div>
                       </div>
                       <div class="col-sm-4">
                          <div class="form-group">
-                              <label for="telefono_quinceanera" id="titulo">Télefono Fijo:</label><br/>
+                              <label for="telefono_quinceanera" id="titulo">Teléfono Fijo:</label><br/>
                               <input class="form-control check" data-nombre="Telefono Quinceañera:" id="telefono_quinceanera">
                          </div>
                       </div>
@@ -356,7 +356,7 @@
                       </div>
                       <div class="col-sm-4">
                          <div class="form-group">
-                             <label for="date" id="titulo">fecha Nacimiento:</label><br/>
+                             <label for="date" id="titulo">Fecha Nacimiento:</label><br/>
                              <input type="date" class="form-control" id="fechaNacimiento" name="fechaNacimiento"/>
                          </div>
                       </div>    
@@ -431,7 +431,7 @@
                 <div class="row">
                 <div class="col-sm-4">
                          <div class="form-group">
-                             <label for="date" id="titulo">Fecha Emision:</label>
+                             <label for="date" id="titulo">Fecha Emisión:</label>
              <input type="date" class="form-control" id="visaEmision" name="visaEmision"/>
                          </div>
                       </div>
@@ -475,7 +475,7 @@
                       </div>
                       <div class="col-sm-4">
                          <div class="form-group">
-                              <label for="time" id="titulo">Cedula:  (<font color="#FF0000">*</font>)</label><br/>
+                              <label for="time" id="titulo">Cédula:  (<font color="#FF0000">*</font>)</label><br/>
                               <input class="form-control check"  id="cedulaCon">
                          </div>
                       </div>
@@ -540,7 +540,7 @@
                       </div>  
                       <div class="col-sm-4">
                          <div class="form-group">
-                              <label for="email" id="titulo">Email: (<font color="#FF0000">*</font>)</label><img src="imgs/mail.gif" border="0" class="mailClick" data-id="email" onMouseOver="document.body.style.cursor='pointer';" onMouseOut="document.body.style.cursor='pointer';"/><br/>
+                              <label for="email" id="titulo">E-mail: (<font color="#FF0000">*</font>)</label><br/>
                               <input ng-model="search.email" type="email" class="form-control check check2 email" data-nombre="Email:" id="email">
                          </div>
                       </div>             
@@ -1142,7 +1142,7 @@
          <div class="col-sm-3 bitacora-div">
                <div class="row bitacora-name">
                    <div class="page-header moveBitacora">
-                       <h2>Bitacora</h2>
+                       <h2>Bitácora</h2>
                    </div>
                </div>
                <div class="row bitacora-write">

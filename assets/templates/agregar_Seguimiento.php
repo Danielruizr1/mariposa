@@ -248,7 +248,7 @@
                 <div class="col-sm-4">
                    <div class="form-group">
                         <label for="email" id="titulo">E-mail: (<font color="#FF0000">*</font>)</label><img src="imgs/mail.gif" border="0" class="mailClick" data-id="email" onMouseOver="document.body.style.cursor='pointer';" onMouseOut="document.body.style.cursor='pointer';"/><br/>
-                        <input  ng-change="changeSearch(find.email, 'email')" ng-model="find.email" type="email" class="form-control check check2 email requiredd" data-nombre="Email:" id="email">
+                        <input  ng-change="changeSearch(find.email, 'email')" ng-model="find.email" type="text" class="form-control check check2 email requiredd" data-nombre="Email:" id="email">
                    </div>
                 </div>
                 <div class="col-sm-4">
@@ -333,7 +333,7 @@
                 <div class="col-sm-4">
                    <div class="form-group">
                         <label for="mail_quinceanera" id="titulo">E-mail Quinceañera: (<font color="#FF0000">*</font>)</label><img src="imgs/mail.gif" border="0" data-id="mail_quinceanera" class="mailClick" onMouseOver="document.body.style.cursor='pointer';" onMouseOut="document.body.style.cursor='pointer';"/><br/>
-                        <input class="form-control check email14 requiredd" type="email" data-nombre="Email quinceañera:" name="mail_quinceanera" id="mail_quinceanera" ng-change="changeSearch(find.mail_quinceanera, 'mail_quinceanera')" ng-model="find.mail_quinceanera">
+                        <input type="text" class="form-control check email14 requiredd"  data-nombre="Email quinceañera:" name="mail_quinceanera" id="mail_quinceanera" ng-change="changeSearch(find.mail_quinceanera, 'mail_quinceanera')" ng-model="find.mail_quinceanera">
                    </div>
                 </div>
              </div>
@@ -390,7 +390,7 @@
                 <div class="col-sm-3">
                    <div class="form-group">
                         <label for="mail_padre" id="titulo">E-mail del Padre:</label><img src="imgs/mail.gif" class="mailClick" border="0" data-id="mail_padre"  onMouseOver="document.body.style.cursor='pointer';" onMouseOut="document.body.style.cursor='pointer';"/><br/>
-                        <input class="form-control check email1" type="email" data-nombre="Email del Padre:" type="text" name="data[Seguimiento][mail_padre]" id="mail_padre" ng-change="changeSearch(find.mail_padre, 'mail_padre')" ng-model="find.mail_padre">
+                        <input class="form-control check email1"  data-nombre="Email del Padre:" type="text"  id="mail_padre" ng-change="changeSearch(find.mail_padre, 'mail_padre')" ng-model="find.mail_padre">
                    </div>
                 </div>
                 <div class="col-sm-3">
@@ -415,8 +415,8 @@
                 </div>
                 <div class="col-sm-3">
                    <div class="form-group">
-                        <label for="mail_madre" id="titulo">E-mail de la Madre:</label><img src="imgs/mail.gif" class="mailClick" border="0" data-id="mail_padre" onMouseOver="document.body.style.cursor='pointer';" onMouseOut="document.body.style.cursor='pointer';"/><br/>
-                        <input class="form-control check email2" type="email" data-nombre="Email de la madre:" type="text" name="data[Seguimiento][mail_madre]" id="mail_madre" ng-change="changeSearch(find.mail_madre, 'mail_madre')" ng-model="find.mail_madre">
+                        <label for="mail_madre" id="titulo">E-mail de la Madre:</label><img src="imgs/mail.gif" class="mailClick" border="0" data-id="mail_madre" onMouseOver="document.body.style.cursor='pointer';" onMouseOut="document.body.style.cursor='pointer';"/><br/>
+                        <input class="form-control check email2"  data-nombre="Email de la madre:" type="text" name="data[Seguimiento][mail_madre]" id="mail_madre" ng-change="changeSearch(find.mail_madre, 'mail_madre')" ng-model="find.mail_madre">
                    </div>
                 </div>
                 <div class="col-sm-3">
@@ -485,7 +485,7 @@
              <div class="row">
                 <div class="col-sm-4">
                    <div class="form-group">
-                        <label for="date" id="titulo">Ultimo Contacto:</label><br/>
+                        <label for="date" id="titulo">Último Contacto:</label><br/>
                         <input class="form-control"  id="ultimo_contacto" name="data[Seguimiento][ultimo_contacto]" disabled>
                    </div>
                 </div>
@@ -522,11 +522,11 @@
           <div class="col-sm-3 bitacora-div">
                <div class="row bitacora-name">
                    <div class="page-header moveBitacora">
-                       <h2>Bitacora</h2>
+                       <h2>Bitácora</h2>
                    </div>
                </div>
                <div class="row bitacora-write">
-                <div class="col-sm-12">
+                <div class="col-sm-12 calCol">
                          <button class="btn  btn-default" id="showCalendario"><i class="glyphicon glyphicon-calendar"></i> Guardar & Agregar a Calendario</button>
                     </div>
                     <textarea class="form-control textarea noSet" id="bitacora" placeholder="Escribir.."></textarea>

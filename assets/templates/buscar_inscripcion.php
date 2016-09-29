@@ -71,6 +71,22 @@
    cursor:hand;
    cursor:pointer;
      }
+
+     .btn-info {
+  border-radius: 0;
+  margin: 10px;
+  
+}
+
+.col-sm-6 {
+      text-align: left;
+      margin-left: 1.5em;
+      
+     }
+
+     .col-sm-6 .form-control {
+      font-size: 12px;
+     }
    </style>
    <!-- build:css css/main.css -->
     <!-- endbuild -->
@@ -84,7 +100,7 @@
        <!--Fomr de Dojo para manejo de los botones con el tema claro-->
        <div data-dojo-type="dijit.form.Form" id="myForm" data-dojo-id="myForm" encType="multipart/form-data" action="" method="">
         <div style="width:100%; float:left; text-align:left; margin-left:1em;">
-          <button data-dojo-type="dijit.form.Button" type="cancel" name="cancelButton" value="Cancelar" onClick="location.replace('inscripcion.php');">Volver</button>
+          <button type="button" class="btn btn-info" onClick="location.replace('inscripcion.php');">Volver</button>
         </div>
         <!--Inicio de campos para busqueda---->
         <div id="fila1" style="width:95%; font-family:Verdana, Geneva, sans-serif; font-size:14px; margin-bottom:5px; margin-left:1em; float:left;">
@@ -108,11 +124,11 @@
             <input  id="ciudad" class="claro" style="width:220px"/>
            </div>
         <div style="float:left;padding-left:0.5em; text-align:left">
-        <label for="time" id="titulo" style="text-align:left">Mes</label><br/>
+        <label for="time" id="titulo" style="text-align:left">Mes:</label><br/>
          <input id="mes" class="claro"  style="width:250px;-moz-border-radius: 5px;border-radius: 5px; border: #D7D7D7 solid 1px"/> 
         </div>
          <div style="float:left;padding-left:0.5em; text-align:left">
-        <label for="time" id="titulo" style="text-align:left">Año</label><br/>
+        <label for="time" id="titulo" style="text-align:left">Año:</label><br/>
          <input id="year" class="claro"  style="width:250px;-moz-border-radius: 5px;border-radius: 5px; border: #D7D7D7 solid 1px"/> 
         </div>
            
@@ -147,7 +163,7 @@
         <div class="row">
               <div class="col-sm-6">
                 <label>
-                  Buscar en la bitacora..
+                  Buscar en la bitácora:
                   </label>
                   <textarea ng-model="controller.find"  class="form-control" ng-change="controller.searchBitacora()" rows="2"></textarea>
                   
@@ -157,13 +173,13 @@
 
         <div id="fila4" style="width:95%; font-family:Verdana, Geneva, sans-serif; font-size:14px; margin-bottom:5px; margin-left:1em; float:left;">
         <div style="float:right;padding-right:0.5em; text-align:right">
-        <button type="button" ng-click="controller.new()" >
+        <button type="button" class="btn btn-info" ng-click="controller.new()" >
                 Nueva Busqueda
     </button>
 
         </div>
         <div style="float:right;padding-right:0.5em; text-align:right">
-        <button id="exportBtn" data-dojo-type="dijit.form.Button" onClick="exportExcel();"
+        <button id="exportBtn" type="button" class="btn btn-info" onClick="exportExcel();"
             >
                 Exportar a Excel
     </button>
@@ -171,10 +187,10 @@
         </div>
 
         <div style="float: right;padding-right:0.5em; text-align:right">
-           <button data-dojo-type="dijit.form.Button" type="button" name="searchButton" value="Buscar" onClick="buscar();">Buscar</button>
+           <button type="button" class="btn btn-info" name="searchButton" value="Buscar" onClick="buscar();">Buscar</button>
         </div>
         <div style="float: right;padding-right:0.5em; text-align:right">
-               <button type="button" name="searchButton" value="Buscar" ng-click="controller.buscar()">Buscar Por Bitacora</button>
+               <button type="button" class="btn btn-info" name="searchButton" value="Buscar" ng-click="controller.buscar()">Buscar Por Bitacora</button>
             </div>  
                 <div style="float: right;padding-right:0.5em; text-align:right">
 

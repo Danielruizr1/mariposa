@@ -707,11 +707,11 @@ function filtragrid(){
 			grid.filter({id:"*"},true);
 			}
 			else{
-				grid.filter({id:'*'+nombre+"*"},true); 
+				grid.filter({id:'*'+nombre.toUpperCase()+"*"},true); 
 			}
 		} 
 		else{
-			nombre=nombre;
+			nombre=nombre.toUpperCase();
 			if(document.getElementById('nombrenina').value==''){
 			grid.filter({nombrequinceanera:"*", estado:document.getElementById('estado').value},true);
 			}
