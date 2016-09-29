@@ -175,7 +175,7 @@
              <div class="row">
               <div class="col-sm-6">
                 <label>
-                  Buscar en la bitacora..
+                  Buscar en la bitácora:
                   </label>
                   <textarea ng-model="controller.find"  class="form-control" ng-change="controller.searchBitacora()" rows="2">
                     
@@ -204,7 +204,7 @@
             </div>  
 
             <div style="float: right;padding-right:0.5em; text-align:right">
-               <button type="button" class="btn btn-info" name="searchButton" value="Buscar" ng-click="controller.buscar()">Buscar Por Bitacora</button>
+               <button type="button" class="btn btn-info" name="searchButton" value="Buscar" ng-click="controller.buscar()">Buscar Por Bitácora</button>
             </div>   
             </div>
           </div>

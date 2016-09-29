@@ -19,7 +19,7 @@
    </head>
      <body ng-controller="AlertController as alert">
      <div class="warning">
-       <p>Bitacora se ha guardado con éxito </p>
+       <p>Bitácora se ha guardado con éxito </p>
      </div>
 
 

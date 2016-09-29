@@ -193,7 +193,7 @@
            <button type="button" class="btn btn-info" name="searchButton" value="Buscar" onClick="buscar();">Buscar</button>
         </div>
         <div style="float: right;padding-right:0.5em; text-align:right">
-               <button type="button" class="btn btn-info" name="searchButton" value="Buscar" ng-click="controller.buscar()">Buscar Por Bitacora</button>
+               <button type="button" class="btn btn-info" name="searchButton" value="Buscar" ng-click="controller.buscar()">Buscar Por Bitácora</button>
             </div>  
                 <div style="float: right;padding-right:0.5em; text-align:right">
 
