@@ -391,7 +391,7 @@ function poneFecha(entry, rowIndex){
 						{name:"Destino", field:"iddestino", width:"15em",formatter: poneDestino,  width:"4em"},
 						{name:"Año", field:"anoviaje_quinceanera", width:"3em",formatter: poneSalida},
 						{name:"Mes", field:"mesviaje_quinceanera", width:"2em",formatter: poneMes},						
-						{name:"Quien Inscribío a la niña", field:"nombrequienllama", width:"15em",formatter:setContacto},
+						{name:"Quien Inscribió a la niña", field:"nombrequienllama", width:"15em",formatter:setContacto},
 						{name:"Vendedor", field:"nombreAgente", width:"15em", formatter:setVendedor, width:"11.5em"},
 						{name:"Asesor", field:"asesorNombre", width:"15em",formatter: setVendedor, width:"11.5em"},
 						{name:"Ciudad", field:"ciudadResidencia", width:"7.5em", formatter:poneCiudad},
