@@ -320,7 +320,7 @@
              <div class="row">
                 <div class="col-sm-4">
                    <div class="form-group">
-                        <label for="telefono_quinceanera" id="titulo">Télefono Fijo:</label><br/>
+                        <label for="telefono_quinceanera" id="titulo">Teléfono Fijo:</label><br/>
                         <input ng-change="changeSearch(find.telefono_quinceanera, 'telefono_quinceanera')" ng-model="find.telefono_quinceanera" class="form-control check" data-nombre="Telefono Quinceañera:" name="data[Seguimiento][telefono_quinceanera]" id="telefono_quinceanera">
                    </div>
                 </div>

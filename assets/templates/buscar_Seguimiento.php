@@ -96,6 +96,9 @@
   margin: 10px;
   
 }
+.backBtn {
+    margin-right: 5em;
+}
 
 
 
@@ -121,8 +124,8 @@
        <!--Fomr de Dojo para manejo de los botones con el tema claro-->
        <div ng-show="controller.estado == 1">
            <div data-dojo-type="dijit.form.Form" id="myForm" data-dojo-id="myForm" encType="multipart/form-data" action="" method="" >
-            <div style="width:100%; float:left; text-align:left; margin-left:1em;">
-              <button type="button" class="btn btn-info" onClick="location.replace('seguimientos.php');">Volver</button>
+            <div style="width:100%; float:left; text-align:right; margin-right:4em;">
+              <button type="button" class="btn btn-info backBtn" onClick="location.replace('seguimientos.php');">Volver</button>
             </div>
             <!--Inicio de campos para busqueda---->
             <div id="fila1" style="width:95%; font-family:Verdana, Geneva, sans-serif; font-size:14px; margin-bottom:5px; margin-left:1em; float:left;">
@@ -163,7 +166,7 @@
                 <input  id="fase" class="claro" style="width:220px"/>
                </div>
                <div style="float:left;padding-left:0.5em;text-align:left">
-                <label for="time" id="titulo">Interes:</label><br/>
+                <label for="time" id="titulo">Interés:</label><br/>
                 <input  id="interes" class="claro" style="width:220px"/>
                </div>
 

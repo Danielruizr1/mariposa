@@ -87,6 +87,8 @@
 				  });
 				  request.execute(function(){
 				  	console.log('message sent');
+				  	$( ".modal-body" ).append('<p>El correo se ha enviado con éxito</p>');
+                    $('#confirmModal').modal('show');
 				  });
 		 	 
 	 },	 

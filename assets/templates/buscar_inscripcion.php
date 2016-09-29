@@ -87,6 +87,9 @@
      .col-sm-6 .form-control {
       font-size: 12px;
      }
+     .backBtn {
+    margin-right: 5em;
+}
    </style>
    <!-- build:css css/main.css -->
     <!-- endbuild -->
@@ -99,8 +102,8 @@
       <div style="width:95%;; border:solid 1px #EAEAEA;-moz-border-radius: 15px;border-radius: 15px; height:100%">
        <!--Fomr de Dojo para manejo de los botones con el tema claro-->
        <div data-dojo-type="dijit.form.Form" id="myForm" data-dojo-id="myForm" encType="multipart/form-data" action="" method="">
-        <div style="width:100%; float:left; text-align:left; margin-left:1em;">
-          <button type="button" class="btn btn-info" onClick="location.replace('inscripcion.php');">Volver</button>
+        <div style="width:100%; float:right; text-align:right; margin-right:4em;">
+          <button type="button" class="btn btn-info backBtn" onClick="location.replace('inscripcion.php');">Volver</button>
         </div>
         <!--Inicio de campos para busqueda---->
         <div id="fila1" style="width:95%; font-family:Verdana, Geneva, sans-serif; font-size:14px; margin-bottom:5px; margin-left:1em; float:left;">
