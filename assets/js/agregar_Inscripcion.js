@@ -3,7 +3,7 @@ var segId = window.parent.idSeguimienteActualEnUso;
 var whatis = window.parent.whatIsNow;
 var theInsc = {};
 var lists ={};
-$('#form-div, .bitacora-div').height(tama);
+$('#form-div, .bitacora-div').height(tama-30);
 
 $(document).ready(function(e){
      lists.agencia = {};

@@ -10,6 +10,9 @@
 	z-index:999999;
 }*/
 
+
+
+
 .calCol {
 	padding-right: 0px;
 	padding-left: 0px;
@@ -120,8 +123,9 @@
 .bitacora-name {
 	text-align: center;
 }
-.bitacora-name .page-header {
-	margin:30px 20px;
+.bitacora-name .page-header{
+	margin-top: 10px;
+	margin-bottom: 5px;
 }
 .bitacora-write {
 	padding: 10px 10px;
