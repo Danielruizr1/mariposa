@@ -29,6 +29,7 @@
 	   var seg = Object.create(Seguimiento.prototype);
 	   seg.llamadaEfectiva = "0";
 	   seg.url = "seg";
+	   seg.tipo = "Seg";
 	   seg.user = window.parent.idusuarioactivo;
        seg.number = segNumber;
        segNumber = ++segNumber;
@@ -254,18 +255,21 @@ Seguimiento.prototype.setBitacora = function() {
 	document.getElementById("list").innerHTML = contenido;
 }	
 
-Seguimiento.prototype.saveBitacora = function() {
+Seguimiento.prototype.saveBitacora = function(bit) {
+	console.log(bit);
+	var bit  = bit || "";
 	var controller = this;
 	var urls = {};
 	   urls.seg = "/v15/mariposa/seguimientos/recibeBitacora";
 	   urls.insc = "/v15/mariposa/inscripcions/recibeBitacora";
 	var contenido=document.getElementById('bitacora').value;
 	var alert = "1";
-	if(this.type == "new" || this.type=="change"){
-		contenido = this.newBita;
+	if(this.type == "new" || controller.type=="change"){
+		contenido = controller.newBita;
 		alert = "0";
 		this.type = "edit";
 	}
+	if(bit)contenido = bit;
 	if (contenido){
     var date = this.getDate(1);
     var bitacora = {idseguimiento:this.data.id, nombreUsuario:window.parent.nombreuseract,
@@ -483,19 +487,19 @@ Seguimiento.prototype.setListeners = function() {
                     elSeguimiento.type="change";
                     elSeguimiento.newBita= "El nombre de la quinceañera ha cambiado de "+elSeguimiento.data[this.id]+" a "+elSeguimiento.data2[this.id];
                 }
-                if(this.id == "estado" && elSeguimiento.type != 'Ins' && elSeguimiento.data2[this.id] != elSeguimiento.data[this.id]){
+                if(this.id == "estado" && elSeguimiento.tipo == 'Seg' && elSeguimiento.data2[this.id] != elSeguimiento.data[this.id]){
                     elSeguimiento.type="change";
                     var estado = {1:'Pendiente', 2: 'Inscrita', 3: 'No Inscrita'};
                     elSeguimiento.newBita= "El estado ha cambiado de "+estado[elSeguimiento.data[this.id]]+" a "+estado[elSeguimiento.data2[this.id]];
                 }
-                if(this.id == "estado" && elSeguimiento.type == 'Ins' && elSeguimiento.data2[this.id] != elSeguimiento.data[this.id]){
+                if(this.id == "estado" && elSeguimiento.tipo == 'Ins' && elSeguimiento.data2[this.id] != elSeguimiento.data[this.id]){
                     elSeguimiento.type="change";
                     var estado = {1:'Viaje confirmado', 2: 'Cambio de destino', 
                     3: 'Cambio de fecha de viaje', 4: 'Cambio de fecha de viaje con cambio de destino',
 	                5: 'Cancelación de viaje',};
                     elSeguimiento.newBita= "El estado ha cambiado de "+estado[elSeguimiento.data[this.id]]+" a "+estado[elSeguimiento.data2[this.id]];
                 }
-                if(this.id == "fase" && elSeguimiento.type != 'Ins' && elSeguimiento.data2[this.id] != elSeguimiento.data[this.id]){
+                if(this.id == "fase" && elSeguimiento.tipo == 'Seg' && elSeguimiento.data2[this.id] != elSeguimiento.data[this.id]){
                     elSeguimiento.type="change";
                     var fase = {1:'Inicio', 2: 'Volver a llamar', 3: 'Posponen viaje',
                     4:'Envié datos para cosignar y documentos de inscripción',
@@ -512,7 +516,12 @@ Seguimiento.prototype.setListeners = function() {
                  if($(this).hasClass("ciudades")){
                      elSeguimiento.data2[this.id] = lists.ciudad[this.value];
                  } else {
-                  elSeguimiento.data2[realID] = lists[list][this.value];    	 
+                 	var listValue = this.value;
+		          if(lists[list].hasOwnProperty(listValue)){
+	                  elSeguimiento.data2[realID] = lists[list][listValue];
+	                } else {
+	                	$(this).val("");
+	                }   	 
             	}
             }
 	   })

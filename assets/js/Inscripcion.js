@@ -2,6 +2,7 @@ var  Inscripcion = function(id, whatis){
 	var insc = Object.create(Inscripcion.prototype);
 	insc.type = whatis;
 	insc.url = "insc";
+  insc.tipo = "Ins";
 	insc.data2 = {};
 	insc.pagos = {};
 	insc.pagos.pendientePesos = 0;
@@ -15,6 +16,7 @@ var  Inscripcion = function(id, whatis){
 
 	if(whatis == "Seg"){
        insc.data = window.parent.seguimientoAlmacen.get(id);
+       insc.saveBitacora("Niña creada en inscripciones.")
 	} else {
        insc.data = window.parent.inscripcionAlmacen.get(id);
 	}
